@@ -52,15 +52,15 @@
       <td>{{ $message->created_at }}</td>
       <td>
         <section class="d-flex">
-          <form action="#" method="post">
+          <form action="{{ route('admin.comment.show', $message->id) }}" method="post">
           @csrf
-          <button type="submit" class="btn btn-outline-info mt-1">مشاهده پیام</button>
+          <button type="submit" class="btn btn-outline-info mt-1">View message</button>
         </form>
 
-        <form action="#" method="post">
+        <form action="{{ route('admin.message.destroy',$message->id) }}" method="post">
           @csrf
           @method('DELETE')
-          <button type="submit" onclick="return confirm('مطمئنی؟')" class="btn btn-outline-danger m-1">حذف</button>
+          <button type="submit" onclick="return confirm('you sure?')" class="btn btn-outline-danger m-1">Delete</button>
 
         </form>     
 

@@ -16,11 +16,11 @@ Route::prefix('admin')->group(function(){
     Route::get('/',[IndexController::class,'index'])->name('/admin');
     // Route::post('/status/{comment}',[CommentController::class,'status'])->name('admin.comment.status');
     // Route::delete('/delete/{comment}',[CommentController::class,'destroy'])->name('admin.comment.destroy');
-    // Route::post('/reply/{comment}',[CommentController::class,'edit'])->name('admin.comment.edit');
+    Route::post('/show-message/{id}',[MessageController::class,'show'])->name('admin.comment.show');
     // Route::put('/reply/{item}',[CommentController::class,'update'])->name('admin.comment.update');
     // Route::get('/',[HomeController::class,'index'])->name('/admin');
     Route::post('/message',[MessageController::class,'create'])->name('admin.message.create');
-    // Route::delete('/delet/{item}',[MessageController::class,'destroy'])->name('admin.message.destroy');
+    Route::delete('/delet/{id}',[MessageController::class,'destroy'])->name('admin.message.destroy');
 
 
     Route::prefix('/resorces')->group(function(){

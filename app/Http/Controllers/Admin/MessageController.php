@@ -38,9 +38,10 @@ class MessageController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Message $id)
     {
-        //
+        $messages = Message::find($id);
+        return view('admin.message-show',compact('messages'));
     }
 
     /**
@@ -62,8 +63,9 @@ class MessageController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Message $id)
     {
-        //
+        $id->delete();
+        return to_route('/admin')->with('success','Deleted successfully.');
     }
 }
