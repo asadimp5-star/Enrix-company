@@ -1,0 +1,749 @@
+html{
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body{
+   background: #F7f5F1;
+   color: rgb(19, 35, 58); 
+   font-family: 'Times New Roman', system-ui, sans-serif;
+   font-size: 16px; 
+   line-height: 1.6;
+}
+body a{
+  text-decoration: none;
+}
+
+header{
+  background: #2c5a46;
+  border-bottom: 1px solid rgb(226, 230, 234);
+}
+.headerdiv{
+  max-width: 1120px; margin: 0px auto; padding: 16px 24px; 
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;
+}
+.headerdiv1{
+  color: #C9A66B; font-weight: 700; font-size: 22px; letter-spacing: 0.5px;
+}
+nav{
+  display: flex; flex-wrap: wrap; gap: 24px; font-size: 15px; font-weight: 500;
+}
+.navItem{
+  color: #C9A66B; text-decoration: none;
+}
+.headerdiv2{
+  display: flex; align-items: center; gap: 16px;
+}
+.getInTouch{
+  background: #FF2A00; color: rgb(255, 255, 255); text-decoration: none; 
+  padding: 12px 20px; border-radius: 8px; font-weight: 600; font-size: 15px;
+}
+.bg{
+  border: 2px solid #ff2a00c5;
+}
+.bg1{
+  border: 1px solid #ff0000; width: 8rem; margin-top: 0;
+}
+footer{
+  background: rgb(255, 255, 255); border-top: 1px solid rgb(226, 230, 234);
+}
+footer nav{
+  display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start;
+}
+footer a{
+  text-decoration: none;
+}
+.footerdiv{
+  max-width: 1120px; margin: 0px auto; padding: 40px 24px; display: flex; 
+  flex-wrap: wrap; gap: 32px; justify-content: space-between; font-size: 14px; color: rgb(74, 85, 104);
+}
+.footerdiv1{
+  flex: 1 1 260px;
+}
+.footerP1{
+  margin: 0px 0px 4px; font-weight: 700; color: rgb(19, 35, 58);
+}
+
+.getTouch{
+  max-width: 1120px; margin: 0px auto; padding: 0px 24px 72px;
+}
+.getInTouchh2{
+  margin: 0px 0px 8px; font-size: 30px; line-height: 1.2;
+}
+.getTouchdiv{
+  background: rgb(19, 35, 58); color: rgb(255, 255, 255); border-radius: 20px; padding: 48px; display: flex; 
+  flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between;
+}
+.getTouchdiv1{
+  flex: 1 1 420px; min-width: 0px;
+}
+.getTouchdiv2{
+  display: flex; flex-wrap: wrap; gap: 12px;
+}
+.getInTouchP{
+  margin: 0px 0px 8px; font-size: 13px; 
+  font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: rgb(159, 216, 207);
+}
+.getInTouchP1{
+  margin: 0px; color: rgb(213, 220, 228);
+}
+.getInTouchA{
+  background: rgb(255, 255, 255); color: rgb(19, 35, 58); 
+  text-decoration: none; padding: 14px 24px; border-radius: 8px; font-weight: 700;
+}
+.getInTouchA1{
+  border: 1.5px solid rgb(255, 255, 255); color: rgb(255, 255, 255); 
+  text-decoration: none; padding: 13px 24px; border-radius: 8px; font-weight: 700;
+}
+.secName{
+  margin: 0px 0px 12px; font-size: 13px; font-weight: 700; 
+  letter-spacing: 1.5px; text-transform: uppercase; color: rgb(2, 77, 70);
+}
+.introCall{
+  background: rgb(15, 118, 110); color: rgb(255, 255, 255); 
+  text-decoration: none; padding: 14px 24px; border-radius: 8px; font-weight: 600;
+}
+.hero{
+  
+  max-width: 1120px; margin: 0px auto; padding: 80px 24px 64px; 
+  display: flex; flex-wrap: wrap; gap: 48px; align-items: center;
+}
+.heroDiv{
+  flex: 1 1 480px; min-width: 0px;
+}
+.heroH1{
+  margin: 0px 0px 20px; font-size: 48px; line-height: 1.15; font-weight: 700;
+}
+.heroP{
+  margin: 0px 0px 32px; font-size: 19px; color: rgb(74, 85, 104);
+}
+.heroDiv1{
+  display: flex; flex-wrap: wrap; gap: 12px;
+}
+.heroA1{
+  border: 1.5px solid rgb(19, 35, 58); color: rgb(19, 35, 58); 
+  text-decoration: none; padding: 13px 24px; border-radius: 8px; font-weight: 600;
+}
+.heroImg{
+  flex: 1 1 320px; height: 380px; border: 2px dashed rgb(160, 170, 182); border-radius: 16px; display: flex; 
+  align-items: center; justify-content: center; color: rgb(74, 85, 104); font-weight: 600; background: rgb(255, 255, 255);
+}
+.results{
+  background: rgb(204, 240, 237); border-top: 1px solid rgb(226, 230, 234); border-bottom: 1px solid rgb(226, 230, 234);
+}
+.resultsDiv{
+  max-width: 1120px; margin: 0px auto; padding: 28px 24px; 
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px;
+}
+.resultsP1{
+  margin: 4px 0px 0px; font-size: 18px; font-weight: 600;
+}
+.resultsDiv1{
+  display: flex; flex-wrap: wrap; gap: 16px;
+}
+.resultsClient{
+  width: 140px; height: 56px; border: 2px dashed rgb(160, 170, 182); border-radius: 8px; 
+  display: flex; align-items: center; justify-content: center; font-size: 13px; color: rgb(74, 85, 104);
+}
+.help{
+  max-width: 1120px; margin: 0px auto; padding: 72px 24px;
+}
+.helpH2{
+  margin: 0px 0px 32px; font-size: 34px; line-height: 1.2;
+}
+.helpDiv{
+  display: flex; flex-wrap: wrap; gap: 24px;
+}
+.helpDiv1{
+  flex: 1 1 320px; background: rgb(255, 255, 255); border: 1px solid rgb(226, 230, 234); border-radius: 16px; padding: 32px;
+}
+.helpH3{
+  margin: 0px 0px 8px; font-size: 22px;
+}
+.helpP1{
+  margin: 0px 0px 20px; color: rgb(74, 85, 104);
+}
+.howCan{
+  background: rgb(204, 240, 237);
+}
+.howCanDiv{
+  max-width: 1120px; margin: 0px auto; padding: 72px 24px;
+}
+
+.howCanH2{
+  margin: 0px 0px 32px; font-size: 34px; line-height: 1.2;
+}
+.howCanDiv1{
+  display: flex; flex-wrap: wrap; gap: 24px;
+}
+.howCanSec{
+  flex: 1 1 320px; background: rgb(255, 255, 255); border-radius: 16px; padding: 32px;
+}
+.howCanH3{
+  margin: 0px 0px 8px; font-size: 22px;
+}
+.howCanP{
+  margin: 0px 0px 20px; color: rgb(74, 85, 104);
+}
+.work{
+  max-width: 1120px; margin: 0px auto; padding: 72px 24px;
+}
+
+.workH2{
+  margin: 0px 0px 32px; font-size: 34px; line-height: 1.2;
+}
+.workDiv{
+  display: flex; flex-wrap: wrap; gap: 20px;
+}
+.workSec{
+  flex: 1 1 220px; border-top: 3px solid rgb(15, 118, 110); padding-top: 16px;
+}
+.workStep{
+  margin: 0px; font-size: 14px; font-weight: 700; color: rgb(15, 118, 110);
+}
+.workH3{
+  margin: 4px 0px 8px; font-size: 19px;
+}
+.workDescribe{
+  margin: 0px; color: rgb(74, 85, 104);
+}
+.servHero{
+  max-width: 1120px; margin: 0px auto; padding: 56px 24px 64px;
+}
+.servTitle{
+  margin: 0px 0px 16px; font-size: 44px; line-height: 1.15; max-width: 820px;
+}
+.servDesc{
+  margin: 0px 0px 32px; font-size: 19px; color: rgb(74, 85, 104); max-width: 720px;
+}
+.servFor{
+  background: rgb(204, 240, 237); border-top: 1px solid rgb(226, 230, 234); border-bottom: 1px solid rgb(226, 230, 234);
+}
+.servForDiv{
+  max-width: 1120px; margin: 0px auto; padding: 64px 24px; display: flex; flex-wrap: wrap; gap: 48px;
+}
+.servFor1{
+  flex: 1 1 400px; min-width: 0px;
+}
+.servForSecTitle{
+  margin: 0px 0px 16px; font-size: 28px;
+}
+.servForSecDiv{
+  display: flex; flex-direction: column; gap: 10px; color: rgb(74, 85, 104);
+}
+.servWork{
+  max-width: 1120px; margin: 0px auto; padding: 72px 24px;
+}
+.servGrant{
+  max-width: 1120px; margin: 0px auto; padding: 64px 24px;
+}
+.servGrantTitle{
+  margin: 0px 0px 24px; font-size: 28px;
+}
+.servGrantDiv{
+  display: flex; flex-wrap: wrap; gap: 8px; font-size: 14px; font-weight: 600;
+}
+.servGrantDivItem{
+  background: rgb(255, 255, 255); padding: 8px 14px; border-radius: 999px;
+}
+.servFaq{
+  max-width: 1120px; margin: 2rem auto; padding: 0px 24px 72px;
+}
+.servFaqDiv{
+  display: flex; flex-direction: column; gap: 12px;
+}
+.servFaqSec{
+  background: rgb(255, 255, 255); border: 1px solid rgb(226, 230, 234); border-radius: 12px; padding: 20px 24px;
+}
+.servFaqQue{
+  margin: 0px 0px 4px; font-size: 17px;
+}
+.servFaqAns{
+  margin: 0px; color: rgb(74, 85, 104);
+}
+.partnerHero{
+  max-width: 1120px; 
+  margin: 0px auto; padding: 72px 24px 64px; 
+  display: flex; flex-wrap: wrap; gap: 48px; align-items: center;
+}
+.partnerHeroSec{
+  flex: 1 1 480px; min-width: 0px;
+}
+.partnerHeroTitle{
+  margin: 0px 0px 16px; font-size: 44px; line-height: 1.15;
+}
+.partnerHeroDesc{
+  margin: 0px 0px 28px; font-size: 19px; color: rgb(74, 85, 104);
+}
+.partnerHeroImg{
+  flex: 1 1 320px; height: 320px; 
+  border: 2px dashed rgb(160, 170, 182); border-radius: 20px; display: flex; align-items: center; justify-content: center; 
+  color: rgb(74, 85, 104); font-weight: 600; background: rgb(255, 255, 255); text-align: center; padding: 24px; box-sizing: border-box;
+}
+.enrixPart{
+  background: rgb(204, 240, 237); border-top: 1px solid rgb(226, 230, 234); border-bottom: 1px solid rgb(226, 230, 234);
+}
+.enrixPartDive{
+  max-width: 1120px; margin: 0px auto; padding: 64px 24px;
+}
+.enrixPartTitle{
+  margin: 0px 0px 32px; font-size: 32px; line-height: 1.2;
+}
+.enrixPartSec{
+  display: flex; flex-wrap: wrap; gap: 32px;
+}
+.enrixPartItem{
+  flex: 1 1 260px;
+}
+.enrixPartItemTitle{
+  margin: 0px 0px 8px; font-size: 19px;
+}
+.enrixPartItemDesc{
+  margin: 0px; color: rgb(74, 85, 104);
+}
+.together{
+  max-width: 1120px; margin: 0px auto; padding: 72px 24px;
+}
+.togetherTitle{
+  margin: 0px 0px 8px; font-size: 32px; line-height: 1.2;
+}
+.togetherDesc{
+  margin: 0px 0px 32px; color: rgb(74, 85, 104);
+}
+.togetherDiv{
+  display: flex; flex-wrap: wrap; gap: 20px;
+}
+.togetherDivItem{
+  flex: 1 1 300px; 
+  background: rgb(255, 255, 255); border: 1px solid rgb(226, 230, 234); 
+  border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 8px;
+}
+.togetherDivTitle{
+  margin: 0px; font-size: 20px;
+}
+.togetherDivDesc{
+  margin: 0px; color: rgb(74, 85, 104);
+}
+.partnerWork{
+  max-width: 1120px; margin: 0px auto; padding: 72px 24px;
+}
+.partnerWorkTitle{
+  margin: 0px 0px 32px; font-size: 32px; line-height: 1.2;
+}
+.partnerTest{
+  max-width: 1120px; margin: 0px auto; padding: 72px 24px;
+}
+.partnerTestDiv{
+  display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 32px;
+}
+.partnerTestDivItem{
+  width: 160px; height: 64px; border: 2px dashed rgb(160, 170, 182); border-radius: 8px; display: flex; 
+  align-items: center; justify-content: center; font-size: 13px; color: rgb(74, 85, 104);
+}
+.partnerTestDiv1{
+  background: rgb(255, 255, 255); border: 1px solid rgb(226, 230, 234);
+   border-radius: 16px; padding: 32px; max-width: 760px;
+}
+.partnerTestDiv1P{
+  margin: 0px 0px 12px; font-size: 20px; font-style: italic;line-height: 1.5;
+}
+.partnerTestDiv1P1{
+  margin: 0px; font-size: 14px; color: rgb(74, 85, 104);
+}
+.aboutHero{
+  max-width: 1120px; margin: 0px auto; padding: 72px 24px 64px; display: flex; flex-wrap: wrap; gap: 48px; align-items: center;
+}
+.aboutHeroImg{
+  flex: 1 1 320px; height: 420px; border: 2px dashed rgb(160, 170, 182); border-radius: 20px; display: flex; align-items: center; justify-content: center; color: rgb(74, 85, 104); font-weight: 600; background: rgb(255, 255, 255);
+}
+.aboutHeroDiv{
+  flex: 1 1 460px; min-width: 0px;
+}
+.aboutHeroTitle{
+  margin: 0px 0px 16px; font-size: 44px; line-height: 1.15;
+}
+.aboutHeroDesc{
+  margin: 0px 0px 16px; font-size: 19px; color: rgb(74, 85, 104);
+}
+.aboutStory{
+  background: rgb(204, 240, 237); border-top: 1px solid rgb(226, 230, 234); border-bottom: 1px solid rgb(226, 230, 234);
+}
+.aboutStoryDiv{
+  max-width: 760px; margin: 0px auto; padding: 72px 24px;
+}
+.aboutStoryDivTitle{
+  margin: 0px 0px 20px; font-size: 32px; line-height: 1.2;
+}
+.aboutStoryDivItem{
+  margin: 0px 0px 16px; color: rgb(74, 85, 104);
+}
+.aboutApproach{
+  max-width: 1120px; margin: 0px auto; padding: 72px 24px;
+}
+.aboutApproachDiv{
+  flex: 1 1 280px; background: rgb(255, 255, 255); border: 1px solid rgb(226, 230, 234); border-radius: 16px; padding: 28px;
+}
+.aboutApproachDivTitle{
+  margin: 0px 0px 8px; font-size: 20px;
+}
+.aboutApproachDivDesc{
+  margin: 0px; color: rgb(74, 85, 104);
+}
+.aboutCreadit{
+  max-width: 1120px; margin: 0px auto; padding: 72px 24px;
+}
+.aboutCreaditDiv{
+  display: flex; flex-wrap: wrap; gap: 24px;
+}
+.aboutCreaditDivItem{
+  flex: 1 1 300px; background: rgb(255, 255, 255); border-radius: 16px; padding: 28px;
+}
+.aboutCreaditDivTitle{
+  margin: 0px 0px 12px; font-size: 18px;
+}
+.aboutCreaditDivDesc{
+  margin: 0px 0px 8px; color: rgb(74, 85, 104);
+}
+.aboutCase{
+  max-width: 1120px; margin: 0px auto; padding: 72px 24px;
+}
+.aboutCaseP{
+  margin: 0px 0px 32px; color: rgb(74, 85, 104);
+}
+.aboutCaseDive{
+  display: flex; flex-wrap: wrap; gap: 24px;
+}
+.aboutCaseDiveItem{
+  flex: 1 1 400px; min-width: 0px; background: rgb(255, 255, 255); 
+  border: 1px solid rgb(226, 230, 234); border-radius: 16px; padding: 32px;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.aboutCaseDiveItemTitle{
+  margin: 0px; font-size: 13px; font-weight: 600; color: rgb(15, 118, 110);
+}
+.aboutCaseDiveItemTitle1{
+  margin: 0px; font-size: 22px;
+}
+.aboutApproachDivDesc{
+  margin: 0px; color: rgb(74, 85, 104);
+}
+.aboutApproachDivp2{
+  margin: 6px 0px 0px; font-style: italic;
+}
+.resorceHero{
+  max-width: 1120px; margin: 0px auto; padding: 64px 24px 40px;
+}
+.resorceHeroTitle{
+  margin: 0px 0px 16px; font-size: 44px; line-height: 1.15;
+}
+.resorceHeroDesc{
+  margin: 0px; font-size: 19px; color: rgb(74, 85, 104); max-width: 720px;
+}
+.resorceFeature{
+  max-width: 1120px; margin: 0px auto; padding: 0px 24px 64px;
+}
+.resorceFeatureDiv{
+  background: rgb(255, 255, 255); border: 1px solid rgb(226, 230, 234); 
+  border-radius: 20px; overflow: hidden; display: flex; flex-wrap: wrap;
+}
+.resorceFeatureDivImg{
+  flex: 1 1 420px; min-height: 300px; background: rgb(226, 230, 234); 
+  display: flex; align-items: center; justify-content: center; color: rgb(74, 85, 104); font-weight: 600;
+}
+.resorceFeatureDivItem{
+  flex: 1 1 420px; min-width: 0px; padding: 40px; display: flex; 
+  flex-direction: column; gap: 12px; justify-content: center;
+}
+.resorceFeatureDivItemDate{
+  margin: 0px; font-size: 13px; font-weight: 600; color: rgb(15, 118, 110);
+}
+.resorceFeatureDivItemTitle{
+  margin: 0px; font-size: 30px; line-height: 1.25;
+}
+.resorceFeatureDivItemSum{
+  margin: 0px; color: rgb(74, 85, 104);
+}
+.resorceList{
+  max-width: 1120px; margin: 0px auto; padding: 0px 24px 72px;
+}
+.resorceListCat{
+  display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px;
+}
+
+.resorceListCat button{
+  background: rgb(255, 255, 255); color: rgb(19, 35, 58); border: 1px solid rgb(226, 230, 234);
+  padding: 10px 18px; border-radius: 999px; font-family: inherit; font-size: 14px; font-weight: 600; min-height: 44px;
+}
+.resorceListArt{
+  display: flex; flex-wrap: wrap; gap: 24px;
+}
+.resorceListArtOne{
+  flex: 1 1 300px; background: rgb(255, 255, 255); border: 1px solid rgb(226, 230, 234); 
+  border-radius: 16px; overflow: hidden; display: flex; flex-direction: column;
+}
+.resorceListArtImg{
+  height: 160px; background: rgb(226, 230, 234); display: flex; align-items: center;
+  justify-content: center; color: rgb(74, 85, 104); font-size: 14px;
+}
+.resorceListArtDiv{
+  padding: 24px; display: flex; flex-direction: column; gap: 8px;
+}
+.resorceListArtDivDate{
+  margin: 0px; font-size: 13px; font-weight: 600; color: rgb(15, 118, 110);
+}
+.resorceListArtDivTitle{
+  margin: 0px; font-size: 19px; line-height: 1.3;
+}
+.resorceListArtDivSum{
+  margin: 0px; font-size: 15px; color: rgb(74, 85, 104);
+}
+.resorceGrant{
+  max-width: 1120px; margin: 0px auto; padding: 72px 24px;
+}
+.resorceGrantDesc{
+  margin: 0px 0px 32px; color: rgb(74, 85, 104); max-width: 720px;
+}
+.resorceGrantDiv{
+  display: flex; flex-wrap: wrap; gap: 16px;
+}
+.resorceGrantDivItem{
+  flex: 1 1 300px; background: rgb(255, 255, 255); border-radius: 14px; padding: 24px; 
+  text-decoration: none; color: rgb(19, 35, 58); display: flex; flex-direction: column; gap: 6px;
+}
+.resorceGrantDivItemTitle{
+  font-size: 13px; font-weight: 600; color: rgb(15, 118, 110);
+}
+.resorceGrantDivItemDEsc{
+  font-size: 20px; font-weight: 700;
+}
+.resorceGrantDivItemDate{
+  font-size: 13px; color: rgb(74, 85, 104);
+}
+.contact{
+  max-width: 1120px; margin: 0px auto; padding: 0px 24px 72px; 
+  display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-start;
+}
+.contactDiv1{
+  flex: 999 1 560px; min-width: 0px; background: rgb(255, 255, 255); 
+  border: 1px solid rgb(226, 230, 234); border-radius: 20px; padding: 40px;
+}
+.contactFormTitle{
+  margin: 0px 0px 24px; font-size: 26px;
+}
+.contactFormItem{
+  display: flex; flex-wrap: wrap; gap: 20px;
+}
+.contactFormItem1{
+  flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px;
+}
+.contactFormItem1Name{
+  font-size: 14px; font-weight: 600;
+}
+.contactFormItem1NameInput{
+  padding: 12px 14px; border: 1px solid rgb(160, 170, 182); border-radius: 8px; 
+  font-family: inherit; font-size: 15px; min-height: 44px; box-sizing: border-box;
+}
+.contactForm{
+  display: flex; flex-direction: column; gap: 20px;
+}
+.contactFormItem2{
+  display: flex; flex-direction: column; gap: 6px;
+}
+.contactFormRadio{
+  border-width: medium; border-style: none; border-color: currentcolor; 
+  border-image: none; margin: 0px; padding: 0px; display: flex; flex-direction: column; gap: 8px;
+}
+.contactFormRadioTitle{
+  font-size: 14px; font-weight: 600; margin-bottom: 1px;
+}
+.contactFormRadioDiv{
+  display: flex; flex-wrap: wrap; gap: 20px; font-size: 15px;
+}
+.contactFormRadioDivItem{
+  display: flex; align-items: center; gap: 8px; min-height: 44px;
+}
+.contactFormSelect{
+  padding: 12px 14px; border: 1px solid rgb(160, 170, 182); border-radius: 8px; 
+  font-family: inherit; font-size: 15px; min-height: 44px; background: rgb(255, 255, 255);
+}
+.contactFormDesc{
+  padding: 12px 14px; border: 1px solid rgb(160, 170, 182); border-radius: 8px; 
+  font-family: inherit; font-size: 15px; resize: vertical;
+}
+.contactFormBut{
+  background: rgb(15, 118, 110); color: rgb(255, 255, 255); border-width: medium; 
+  border-style: none; border-color: currentcolor; border-image: none; padding: 14px 28px; 
+  border-radius: 8px; font-family: inherit; font-size: 16px; font-weight: 600; min-height: 48px;
+}
+.contactDivSide{
+  flex: 1 1 300px; display: flex; flex-direction: column; gap: 24px;
+}
+.contactDivSide1{
+  background: rgb(255, 255, 255); border: 1px solid rgb(226, 230, 234); border-radius: 20px; padding: 32px;
+}
+.contactDivSide1Title{
+  display: flex; flex-direction: column; gap: 14px;
+}
+.contactDivSide1Name{
+  margin: 0px; font-size: 14px; font-weight: 700;
+}
+.contactDivSide2{
+  background: rgb(204, 240, 237); border-radius: 20px; padding: 32px;
+}
+.contactDivSide2Title{
+  display: flex; gap: 12px;
+}
+.contactDivSide2Num{
+  flex: 0 0 28px; height: 28px; border-radius: 999px; background: rgb(15, 118, 110); 
+  color: rgb(255, 255, 255); font-size: 14px; font-weight: 700; display: flex; 
+  align-items: center; justify-content: center;
+}
+.contactBook{
+  max-width: 1120px; margin: 0px auto; padding: 0px 24px 72px;
+}
+.contactBookDiv{
+  background: rgb(255, 255, 255); border: 1px solid rgb(226, 230, 234); 
+  border-radius: 16px; padding: 32px; display: flex; flex-wrap: wrap; gap: 24px; 
+  align-items: center; justify-content: space-between;
+}
+.contactBookDivTitle{
+  flex: 1 1 420px; min-width: 0px;
+}
+.contactBookDivDesc{
+  margin: 0px 0px 6px; font-size: 24px;
+}
+.contactBookDivDesc1{
+  margin: 0px; color: rgb(74, 85, 104);
+}
+
+.Sarticle{
+  max-width: 760px; margin: 0px auto; padding: 56px 24px 0px;
+}
+.SarticleTitle{
+  margin: 0px 0px 20px; font-size: 42px; line-height: 1.2;
+}
+.SarticleTitleAuth{
+  font-weight: 600; color: rgb(19, 35, 58);
+}
+.SarticleTitleImag{
+  height: 380px; background: rgb(226, 230, 234); border-radius: 16px; display: flex; 
+  align-items: center; justify-content: center; color: rgb(74, 85, 104); 
+  font-weight: 600; margin-bottom: 40px;
+}
+.SarticleKeyw{
+  background: rgb(204, 240, 237); border-radius: 16px; padding: 28px; margin-bottom: 40px;
+}
+.SarticleKeywTitle{
+  margin: 0px 0px 12px; font-size: 20px;
+}
+.SarticleKeywDesc{
+  display: flex; flex-direction: column; gap: 8px;
+}
+.SarticleDesc{
+  margin: 36px 0px 12px; font-size: 28px;
+}
+.SarticleDescImg{
+  height: 260px; background: rgb(226, 230, 234); border-radius: 12px; display: flex;
+  align-items: center; justify-content: center; color: rgb(74, 85, 104); font-size: 14px; 
+  margin: 28px 0px 8px;
+}
+.SarticleDescSorc{
+  border-left: 4px solid rgb(15, 118, 110); background: rgb(255, 255, 255); 
+  border-radius: 0px 12px 12px 0px; padding: 20px 24px; margin-bottom: 40px;
+}
+.SarticleDescSorcTitle{
+  margin: 0px 0px 6px; font-weight: 700;
+}
+.SarticleAut{
+  background: rgb(204, 240, 237); border: 1px solid rgb(226, 230, 234); 
+  border-radius: 16px; padding: 28px; display: flex; flex-wrap: wrap; gap: 20px; 
+  align-items: center; margin-bottom: 64px;
+}
+.SarticleAutImg{
+  width: 88px; height: 88px; border-radius: 999px; border: 2px dashed rgb(160, 170, 182); 
+  flex: 0 0 88px; display: flex; align-items: center; justify-content: center; 
+  font-size: 12px; color: rgb(74, 85, 104);
+}
+.SarticleAutNme{
+  flex: 1 1 300px; min-width: 0px;
+}
+.SarticleAutNmeDesc{
+  margin: 0px 0px 4px; font-size: 18px; font-weight: 700;
+}
+.SarticleAutNmeDesc1{
+  margin: 0px 0px 8px; color: rgb(74, 85, 104);
+}
+
+
+
+
+
+
+
+
+
+
+.proimg{
+  background-image: url("{{ URL::asset('assets/company-image/products-image/cleaning-g2fb7f4eaf_1920.jpg')}}");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+.TimesRoman{
+  font-family: 'Times New Roman', Times, serif;
+}
+.Tahoma{
+  font-family: 'Tahoma',Manrope;
+}
+.Courier{
+  font-family:  'Courier', monospace;
+}
+.Arial{
+  font-family:  'Arial Narrow';
+}
+
+.mySlides {display:none;}
+
+
+.mobilePic{
+  text-align: center;
+  color: aliceblue;
+  background-color: rgba(49, 49, 49, 0.486);
+  width: 60%;
+  border-radius: 2rem;
+}
+.log{
+  text-decoration: none;
+  cursor: text;
+  color: black;
+}
+.align{
+  align-items: center;
+  
+}
+
+
+.green{
+  background-color: #1E3B2F;
+}
+
+.gold{
+  color: #C9A66B;
+}
+
+.ivory{
+  background-color: #F7f5F1;
+}
+.altitud{
+  height: 20rem;
+}
+
+.imgSize{
+  width: 30rem;
+  height: 30rem;
+  border-radius: 10px;
+}
+
