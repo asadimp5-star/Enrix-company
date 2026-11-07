@@ -10,7 +10,7 @@ class IndexController extends Controller
 {
     public function index()
     {
-        $messages = Message::orderByDesc('id')->get();
+        $messages = Message::orderByDesc('id')->paginate(10);
         return view('admin.dashboard',compact('messages'));
     }
 

@@ -16,6 +16,7 @@
 @section('content')
 
  @section('page-name','Home page')
+ 
 
    
 <section>
@@ -73,12 +74,16 @@
     @endforelse
     
   </tbody>
-    </table> 
+  
+
+
+</table> 
 
 
   
-    
-<div class="col-3 pe-5"></div>
+  <div class="d-flex justify-content-center ">{{ $messages->links() }}
+</div>  
+
 
 </section>
 
