@@ -25,16 +25,15 @@ Route::prefix('admin')->group(function(){
 
     Route::prefix('/resorces')->group(function(){
         Route::get('/resorce',[ResorceController::class,'index'])->name('admin.resorses.resorse');
-        // Route::get('/search-post',[PostController::class,'searchPost'])->name('admin.posts.search-post');
-        // Route::post('/status/{item}',[PostController::class,'status'])->name('admin.posts.status');
-        // Route::delete('/p-delete/{slug}',[PostController::class,'destroy'])->name('admin.posts.delet');
-        // Route::get('/create',[PostController::class,'create'])->name('admin.posts.create');
-        // Route::post('/add',[PostController::class,'store'])->name('admin.posts.store');
-        // Route::get('/edit-post/{slug}',[PostController::class,'edit'])->name('admin.posts.edite');
-        // Route::get('/edit-Upost/{Upost}',[PostController::class,'userEdit'])->name('admin.posts.userEdit');
-        // Route::delete('/deletee/{Upost}',[PostController::class,'Udestroy'])->name('admin.posts.deletee');
+        Route::get('/search-post',[ResorceController::class,'searchPost'])->name('admin.resorces.search-post');
+        Route::post('/p-status/{id}',[ResorceController::class,'status'])->name('admin.resorces.status');
+        Route::delete('/p-delete/{id}',[ResorceController::class,'destroy'])->name('admin.resorces.delet');
+        Route::get('/create',[ResorceController::class,'create'])->name('admin.resorces.create');
+        Route::post('/add',[ResorceController::class,'store'])->name('admin.resorces.store');
+        Route::get('/edit-post/{id}',[ResorceController::class,'edit'])->name('admin.resorces.edite');
+        Route::put('/edit-Upost/{id}',[ResorceController::class,'update'])->name('admin.resorces.update');
 
-        // Route::put('/a-update/{slug}',[PostController::class,'update'])->name('admin.posts.update');
+        
         
     });
     Route::prefix('users')->group(function(){
