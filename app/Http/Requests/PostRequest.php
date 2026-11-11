@@ -23,10 +23,10 @@ class PostRequest extends FormRequest
     public function rules(): array
     {
         return [
-             'image1'=>'nullable|image|mimes:jpg,jpeg,gif,png|max:2024',
-            'image2'=>'nullable|image|mimes:jpg,jpeg,gif,png|max:2024',
-            'image3'=>'nullable|image|mimes:jpg,jpeg,gif,png|max:2024',
-            'profImg'=>'nullable|image|mimes:jpg,jpeg,gif,png|max:2024',
+             'image1'=>'nullable|image|mimes:webp,jpg,jpeg,gif,png|max:2024',
+            'image2'=>'nullable|image|mimes:webp,jpg,jpeg,gif,png|max:2024',
+            'image3'=>'nullable|image|mimes:webp,jpg,jpeg,gif,png|max:2024',
+            'profImg'=>'nullable|image|mimes:webp,jpg,jpeg,gif,png|max:2024',
             'delete_img1'=> 'nullable|boolean',
             'delete_img2'=> 'nullable|boolean',
             'delete_img3'=> 'nullable|boolean',

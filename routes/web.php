@@ -4,6 +4,8 @@ use App\Http\Controllers\Admin\IndexController;
 use App\Http\Controllers\Admin\MessageController;
 use App\Http\Controllers\Admin\ResorceController;
 use App\Http\Controllers\Client\HomeController;
+use App\Http\Controllers\FaqController;
+use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -62,28 +64,20 @@ Route::prefix('admin')->group(function(){
 
     });
 
-    Route::prefix('category')->group(function(){
-        // Route::get('/index',[CategoryController::class,'index'])->name('admin.category.index');
-        // Route::prefix('/ca-wash')->group(function(){
-        //     Route::get('/index',[CategoryController::class,'carWash'])->name('admin.category.car-wash.index');
-        });
-        Route::prefix('/wax')->group(function(){
-            // Route::get('/index',[CategoryController::class,'wax'])->name('admin.category.wax.index');
+    Route::prefix('faq')->group(function(){
+        Route::get('/index',[FaqController::class,'index'])->name('admin.FAQ.index');
+        Route::get('/createe',[FaqController::class,'create'])->name('admin.faq.createe');
+        Route::post('/storee',[FaqController::class,'store'])->name('admin.faq.store');
+        Route::post('/f-status/{id}',[FaqController::class,'status'])->name('admin.faq.status');
+        Route::delete('/f-delete/{id}',[FaqController::class,'destroy'])->name('admin.faq.delete');
+        Route::get('/search-faq',[FaqController::class,'searchQue'])->name('admin.faq.search-faq');
+        Route::get('/edit-faq/{id}',[FaqController::class,'edit'])->name('admin.faq.edite');
+        Route::put('/faq-Upost/{id}',[FaqController::class,'update'])->name('admin.faq.update');
 
-        });
-        Route::prefix('/floor')->group(function(){
-            // Route::get('/index',[CategoryController::class,'floor'])->name('admin.category.floor.index');
-        });
-        Route::prefix('M-floor')->group(function(){
-            // Route::get('/index',[CategoryController::class,'Mfloor'])->name('admin.category.M-floor.index');
-        });
-        // Route::get('/add-product',[CategoryController::class,'create'])->name('admin.category.create');
-        // Route::post('/store',[CategoryController::class,'store'])->name('admin.category.store');
-        // Route::get('/edit/{slug}',[CategoryController::class,'edit'])->name('admin.category.edit');
-        // Route::put('/update/{id}',[CategoryController::class,'update'])->name('admin.category.update');
-        // Route::post('/status/{item}',[CategoryController::class,'status'])->name('admin.category.status');
-        // Route::delete('/delete/{item}',[CategoryController::class,'destroy'])->name('admin.category.delete');
-        
+
+
+
+        });      
 
         Route::prefix('/content')->group(function(){
         Route::get('/index',[IndexController::class,'content'])->name('admin.content.index');
@@ -106,10 +100,10 @@ Route::prefix('admin')->group(function(){
         // Route::get('/edit/{abouts}',[AboutsController::class,'edit'])->name('admin.content.abouts.edit');
         // Route::put('/updat/{abouts}',[AboutsController::class,'update'])->name('admin.content.abouts.updat');
 
-        // Route::get('/contact-us',[HomeController::class,'contactUs'])->name('admin.content.contact-us');
-        // Route::post('/stor',[ContactController::class,'store'])->name('admin.content.contact-us.store');
-        // Route::get('/editee/{contactUs}',[ContactController::class,'edit'])->name('admin.content.contact-us.edit');
-        // Route::put('/updatee/{contactUs}',[ContactController::class,'update'])->name('admin.content.contact-us.update');
+        Route::get('/add-services',[ServiceController::class,'serviceIndx'])->name('admin.content.services');
+        Route::get('/services/{id}',[ServiceController::class,'servicePage'])->name('admin.content.services-page');
+        Route::post('/sstor',[ServiceController::class,'store'])->name('admin.content.services.store');
+        Route::put('/updatee/{serve}',[ServiceController::class,'update'])->name('admin.content.services.update');
         });
         Route::prefix('/settings')->group(function(){
         Route::get('/profile',[IndexController::class,'showProfile'])->name('admin.settings.showProfile');

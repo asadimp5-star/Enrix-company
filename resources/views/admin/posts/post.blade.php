@@ -67,7 +67,9 @@
       <td>{{ substr($post->translations->where('locale','en')->first()->summery??'',0,30).'...' }}</td>
       <td>{{ $post->created_at }}</td>
       <td>{{ $post->aouther }}</td>
-      <td>{{ ($post->status== 1 ? 'Activ' : 'Inactiv')  }}</td>
+      <td><span class="badge {{ $post->status== 1 ? 'bg-success' : 'bg-danger' }}">
+            {{ $post->status== 1 ? 'Activ' : 'Inactiv'}}
+      </span></td>
       <td>
         <section class="d-flex">
 

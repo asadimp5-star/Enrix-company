@@ -31,7 +31,7 @@
                                     <a class="nav-link TimesRoman @yield('pos')" aria-current="page" href="#">Resorces</a>
                                 </li>
                                 <li class="nav-item ">
-                                    <a class="nav-link TimesRoman @yield('Servi')" href="#">Services</a>
+                                    <a class="nav-link TimesRoman @yield('frequ')" href="#">FAQ</a>
                                 </li>
                                 <li class="nav-item ">
                                     <a class="nav-link TimesRoman @yield('conten')" href="#">Content management</a>

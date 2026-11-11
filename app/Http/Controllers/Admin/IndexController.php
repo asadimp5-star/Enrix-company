@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Message;
+use App\Models\Service;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
@@ -16,7 +17,8 @@ class IndexController extends Controller
 
     public function content()
     {
-        return view('admin.site-content.cotent-page');
+        $services = Service::first();
+        return view('admin.site-content.cotent-page',compact('services'));
     }
      public function showProfile()
      {
