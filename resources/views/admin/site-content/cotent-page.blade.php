@@ -111,7 +111,7 @@
   <div class="col-lg-5 col-md-7 col-sm-7 p-2"> 
     <div class="card shadow-sm rounded-4">
         <div class="col">
-          <a href="#">
+          <a href="{{ route('admin.content.abouts.edit',$aboutus->id) }}">
             <div class="card card-cover h-100 overflow-hidden rounded-4 shadow-lg proimg1 p5"> 
             <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"> 
               <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 TimesRoman">about us</h3>

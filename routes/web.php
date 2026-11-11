@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\Admin\IndexController;
 use App\Http\Controllers\Admin\MessageController;
 use App\Http\Controllers\Admin\ResorceController;
@@ -95,10 +96,10 @@ Route::prefix('admin')->group(function(){
         // Route::get('/showw/{item}',[GalleryController::class,'edit'])->name('admin.content.gallery.edit');
         // Route::put('/g-update/{item}',[GalleryController::class,'update'])->name('admin.content.gallery.update');
 
-        // Route::get('/about-us',[HomeController::class,'aboutUs'])->name('admin.content.about-us');
-        // Route::post('/store',[AboutsController::class,'store'])->name('admin.content.about-us.store');
-        // Route::get('/edit/{abouts}',[AboutsController::class,'edit'])->name('admin.content.abouts.edit');
-        // Route::put('/updat/{abouts}',[AboutsController::class,'update'])->name('admin.content.abouts.updat');
+        Route::get('/about-us',[AboutController::class,'index'])->name('admin.content.about-us');
+        Route::post('/a-store',[AboutController::class,'store'])->name('admin.content.about-us.store');
+        Route::get('/about-page/{id}',[AboutController::class,'edit'])->name('admin.content.abouts.edit');
+        Route::put('/updat/{abouts}',[AboutController::class,'update'])->name('admin.content.abouts.updat');
 
         Route::get('/add-services',[ServiceController::class,'serviceIndx'])->name('admin.content.services');
         Route::get('/services/{id}',[ServiceController::class,'servicePage'])->name('admin.content.services-page');

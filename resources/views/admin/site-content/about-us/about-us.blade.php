@@ -9,12 +9,12 @@
   <x-slot>
     <li class="breadcrumb-item p-1 active" aria-current="page"><a class="text-decoration-none" href="#">Content management</a></li>
 
-    <li class="breadcrumb-item p-1 active" aria-current="page">About us</li>
+    <li class="breadcrumb-item p-1 active" aria-current="page">services</li>
   </x-slot>
 </x-manual.page-curent>
 @endsection
 
-@section('page-name','About us')
+@section('page-name','services')
 
 @section('content')
 
@@ -22,7 +22,7 @@
 <section class="m-5">
     
     <section>
-    <form class="row g-3 yekan" action="#" method="post" enctype="multipart/form-data">
+    <form class="row g-3 yekan" action="{{ route('admin.content.about-us.store') }}" method="post" enctype="multipart/form-data">
       @csrf
 
       <ul class="nav nav-tabs mb-3" id="langTab" role="tablist">
@@ -35,111 +35,215 @@
         
        </ul>
 
-      <div class="tab-content">
+       <div class="tab-content">
 
-        <div class="tab-pane fade show active" id="en">
-<div class="col-md-4">
-    <label for="fa_title"  class="form-label d-block ">عنوان*</label>
-    <input type="text" class="form-control" id="fa_title" name="fa[title]" value="{{ old('fa.title') }}">
-    @error('fa.title')
-       <div class="alert alert-danger mt-1">{{ $message }}</div>
-    @enderror
-    
-  </div>
-  <div class="col-md-4">
-    <label for="fa_slug"  class="form-label d-block ">اسلاگ*</label>
-    <input type="text" class="form-control" id="fa_slug" name="fa[slug]" value="{{ old('fa.slug') }}">
-    @error('fa.slug')
-       <div class="alert alert-danger mt-1">{{ $message }}</div>
-    @enderror
-    
-  </div>
+       <div class="tab-pane fade show active" id="en">
 
-  <div class="col-md-4">
-    <label for="images0" class="form-label">تصویر</label>
-    <input class="form-control" type="file" name="images0">
-    @error('images0')
-       <div class="alert alert-danger mt-1">{{ $message }}</div>
-    @enderror
-  </div>
-
-<div class="mb-3 col-8">
-    <label for="fa_description" class="form-label">توضیحات</label>
-    <textarea class="form-control" name="fa[description]" placeholder="توضیحات درباره عضو را اینجا وارد کنید"></textarea>
-    @error('fa.description')
-       <div class="alert alert-danger mt-1">{{ $message }}</div>
-    @enderror
-  </div>
-
-<div class="col-md-4">
-    <label for="images" class="form-label">تصویر1</label>
-    <input class="form-control" type="file" name="images">
-    @error('images')
-       <div class="alert alert-danger mt-1">{{ $message }}</div>
-    @enderror
-  </div>
-
-  <div class="mb-3 col-8">
-    <label for="fa_description1" class="form-label">1توضیحات</label>
-    <textarea class="form-control" name="fa[description1]" placeholder="توضیحات درباره عضو را اینجا وارد کنید"></textarea>
-    @error('fa.description1')
-       <div class="alert alert-danger mt-1">{{ $message }}</div>
-    @enderror
-  </div>            
-
-
-        </div>
-  
-        <div class="tab-pane fade" id="nl">
-<div class="col-md-4 tab-pane fade show active" id="en">
-    <label for="en_title"  class="form-label d-block ">title*</label>
+    <div class="col-md-4 mb-3">
+    <label for="en_title"  class="form-label d-block ">Introduction</label>
     <input type="text" class="form-control" id="en_title" name="en[title]" value="{{ old('en.title') }}">
-    @error('en.title')
+    </div>
+
+    <div class="mb-3 col-8 mb-3">
+    <label for="en_desc" class="form-label">summery</label>
+    <textarea class="form-control" name="en[desc]" placeholder="Enter description..." value="{{ old('en.desc') }}"></textarea>
+
+  </div>
+
+  <div class="col-md-4 mb-3">
+    <label for="image1" class="form-label">main image</label>
+    <input class="form-control" type="file" name="image1">
+    @error('image1')
        <div class="alert alert-danger mt-1">{{ $message }}</div>
     @enderror
+  </div>
+
+  <div>
+    <input type="hidden" class="form-control"  name="blocks[0][type]" value="checkList">
+
+   <div class="col-md-4 mb-3">
+    <label   class="form-label d-block ">My story</label>
+        <input type="text" class="form-control" name="blocks[0][en][lable]" placeholder="sent1">
+    </div>
+
+    <div class="col-md-4 mb-3">
+    <label for="en_title"  class="form-label d-block ">items</label>
+
+    <input type="text" class="form-control"  name="blocks[0][en][items][]" placeholder="sent1">
+    <input type="text" class="form-control"  name="blocks[0][en][items][]" placeholder="sent2">
+    <input type="text" class="form-control"  name="blocks[0][en][items][]" placeholder="sent3">
+    <input type="text" class="form-control"  name="blocks[0][en][items][]" placeholder="sent4">
+    </div>
     
   </div>
 
-  <div class="col-md-4">
-    <label for="en_slug"  class="form-label d-block ">slug*</label>
-    <input type="text" class="form-control" id="en_slug" name="en[slug]" value="{{ old('en.slug') }}">
-    @error('en.slug')
-       <div class="alert alert-danger mt-1">{{ $message }}</div>
-    @enderror
+  <div>
+    <input type="hidden" class="form-control"  name="blocks[1][type]" value="checkList1">
+
+  <div class="col-md-4 mb-3">
+
+    <label  class="form-label d-block ">My approach</label>
+    <input type="text" class="form-control" name="blocks[1][en][lable]" placeholder="sent1">
+    </div>
+
+    <div class="col-md-4 mb-3">
+    <label   class="form-label d-block ">items</label>
+
+     <input type="text" class="form-control"  name="blocks[1][en][items][]" placeholder="sent1">
+    <input type="text" class="form-control"  name="blocks[1][en][items][]" placeholder="sent2">
+    <br>
+    <input type="text" class="form-control"  name="blocks[1][en][items][]" placeholder="sent3">
+    <input type="text" class="form-control"  name="blocks[1][en][items][]" placeholder="sent4">
+    <br>
+    <input type="text" class="form-control"  name="blocks[1][en][items][]" placeholder="sent5">
+    <input type="text" class="form-control"  name="blocks[1][en][items][]" placeholder="sent6">
+    </div>
+  </div>
+
     
+  <div>
+    <input type="hidden" class="form-control"  name="blocks[2][type]" value="step">
+
+  <div class="col-md-4 mb-3">
+    <label   class="form-label d-block ">Credentials & results</label>
+    <input type="text" class="form-control" name="blocks[2][en][lable]" placeholder="sent1">
+    </div>
+    <div class="col-md-4 mb-3">
+    <label class="form-label d-block ">steps title</label>
+
+    <input type="text" class="form-control"  name="blocks[2][en][items][]" placeholder="sent1">
+    <input type="text" class="form-control"  name="blocks[2][en][items][]" placeholder="desc1">
+    <br>
+    <input type="text" class="form-control"  name="blocks[2][en][items][]" placeholder="sent2">
+    <input type="text" class="form-control"  name="blocks[2][en][items][]" placeholder="desc2">
+    <br>
+    <input type="text" class="form-control"  name="blocks[2][en][items][]" placeholder="sent3">
+    <input type="text" class="form-control"  name="blocks[2][en][items][]" placeholder="desc3">
+    <br>
+    
+    </div>
+  </div>  
+
+    <div>
+    <input type="hidden" class="form-control"  name="blocks[3][type]" value="pill">
+
+    <div class="col-md-4 mb-3">
+    <label class="form-label d-block ">Case stories</label>
+   <input type="text" class="form-control" name="blocks[3][en][lable]" placeholder="sent1">
+    </div>
+
+    <div class="col-md-4 mb-3">
+    <label for="en_title"  class="form-label d-block ">pills</label>
+
+    <input type="text" class="form-control"  name="blocks[3][en][items][]" placeholder="pill1">
+    <input type="text" class="form-control"  name="blocks[3][en][items][]" placeholder="pill2">
+    <br>
+    <input type="text" class="form-control"  name="blocks[3][en][items][]" placeholder="pill3">
+    <input type="text" class="form-control"  name="blocks[3][en][items][]" placeholder="pill4">
+    <br>
+    
+    </div>
+    </div>
+
+    
+
+       </div>
+
+       <div class="tab-pane fade" id="nl">
+
+      <div class="col-md-4 mb-3">
+    <label for="nl_title"  class="form-label d-block ">title</label>
+    <input type="text" class="form-control" id="nl_title" name="nl[title]" value="{{ old('nl.title') }}">
+    </div>
+
+    <div class="mb-3 col-8 mb-3">
+    <label for="nl_desc" class="form-label">summery</label>
+    <textarea class="form-control" name="nl[desc]" placeholder="Enter description..." value="{{ old('nl.desc') }}"></textarea>
+
   </div>
-  
-  <div class="mb-3 col-8">
-    <label for="en_description" class="form-label">description</label>
-    <textarea class="form-control" name="en[description]" placeholder="توضیحات درباره عضو را اینجا وارد کنید"></textarea>
-    @error('en.description')
-       <div class="alert alert-danger mt-1">{{ $message }}</div>
-    @enderror
-  </div>
 
-  <div class="mb-3 col-8">
-    <label for="en_description1" class="form-label">description1</label>
-    <textarea class="form-control" name="en[description1]" placeholder="توضیحات درباره عضو را اینجا وارد کنید"></textarea>
-    @error('en.description1')
-       <div class="alert alert-danger mt-1">{{ $message }}</div>
-    @enderror
-  </div>
- 
-        </div>
+  <div class="col-md-4 mb-3">
+    <label   class="form-label d-block ">My story</label>
+        <input type="text" class="form-control" name="blocks[0][nl][lable]" placeholder="sent1">
+    </div>
+
+    <div class="col-md-4 mb-3">
+    <label for="en_title"  class="form-label d-block ">items</label>
+    <input type="text" class="form-control"  name="blocks[0][nl][items][]" placeholder="sent1">
+    <input type="text" class="form-control"  name="blocks[0][nl][items][]" placeholder="sent2">
+    <input type="text" class="form-control"  name="blocks[0][nl][items][]" placeholder="sent3">
+    <input type="text" class="form-control"  name="blocks[0][nl][items][]" placeholder="sent4">
+    </div>
+
+    
+    <div class="col-md-4 mb-3">
+    <label  class="form-label d-block ">My approach</label>
+    <input type="text" class="form-control" name="blocks[1][nl][lable]" placeholder="sent1">
+    </div>
+
+    <div class="col-md-4 mb-3">
+    <label   class="form-label d-block ">items</label>
+    <input type="text" class="form-control"  name="blocks[1][nl][items][]" placeholder="sent1">
+    <input type="text" class="form-control"  name="blocks[1][nl][items][]" placeholder="sent2">
+    <br>
+    <input type="text" class="form-control"  name="blocks[1][nl][items][]" placeholder="sent3">
+    <input type="text" class="form-control"  name="blocks[1][nl][items][]" placeholder="sent4">
+    <br>
+    <input type="text" class="form-control"  name="blocks[1][nl][items][]" placeholder="sent5">
+    <input type="text" class="form-control"  name="blocks[1][nl][items][]" placeholder="sent6">
+    </div>
+
+    <div class="col-md-4 mb-3">
+    <label   class="form-label d-block ">Credentials & results</label>
+    <input type="text" class="form-control" name="blocks[2][nl][lable]" placeholder="sent1">
+    </div>
+    <div class="col-md-4 mb-3">
+    <label class="form-label d-block ">steps title</label>
+
+    <input type="text" class="form-control"  name="blocks[2][nl][items][]" placeholder="sent1">
+    <input type="text" class="form-control"  name="blocks[2][nl][items][]" placeholder="desc1">
+    <br>
+    <input type="text" class="form-control"  name="blocks[2][nl][items][]" placeholder="sent2">
+    <input type="text" class="form-control"  name="blocks[2][nl][items][]" placeholder="desc2">
+    <br>
+    <input type="text" class="form-control"  name="blocks[2][nl][items][]" placeholder="sent3">
+    <input type="text" class="form-control"  name="blocks[2][nl][items][]" placeholder="desc3">
+    <br>
+    <input type="text" class="form-control"  name="blocks[2][nl][items][]" placeholder="sent4">
+    <input type="text" class="form-control"  name="blocks[2][nl][items][]" placeholder="desc4">
+    
+    </div>
+
+    <div class="col-md-4 mb-3">
+    <label class="form-label d-block ">Case stories</label>
+   <input type="text" class="form-control" name="blocks[3][nl][lable]" placeholder="sent1">
+    </div>
+
+    <div class="col-md-4 mb-3">
+    <label for="en_title"  class="form-label d-block ">pills</label>
+
+    <input type="text" class="form-control"  name="blocks[3][nl][items][]" placeholder="pill1">
+    <input type="text" class="form-control"  name="blocks[3][nl][items][]" placeholder="pill2">
+    <br>
+    <input type="text" class="form-control"  name="blocks[3][nl][items][]" placeholder="pill3">
+    <input type="text" class="form-control"  name="blocks[3][nl][items][]" placeholder="pill4">
+    <br>
+    
+    </div>
+
+      
+    
 
 
-      </div>
 
-
-
-
+       </div>
   
   
   <div class="col-12">
     <button class="btn btn-primary" type="submit">Registration</button>
   </div>
   <div class="col-12">
-    <a class="btn btn-warning" href="{{ route('admin.content.index') }}">Return</a>
+    <a class="btn btn-warning" href="#">Return</a>
   </div>
 </form>
     </section>
