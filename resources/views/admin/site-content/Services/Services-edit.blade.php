@@ -156,7 +156,7 @@
 
       </div>
 
-       <div class="tab-pane fade" id="nl">
+<div class="tab-pane fade" id="nl">
 
       <div class="col-md-4 mb-3">
     <label for="nl_title"  class="form-label d-block ">title</label>
@@ -169,7 +169,7 @@
 
   </div>
 
-  </div>
+  
       
         <div>
           @php 
@@ -272,12 +272,7 @@
           </div>
         </div>
 
-      
-    
-
-
-
-       </div>
+</div>
   
   
    <div class="col-12 mt-4">

@@ -11,7 +11,7 @@ class AboutBlock extends Model
     public $table='about_blocks';
     public $translatedAttributes = ['lable' , 'items'];
 
-    public $fillable = ['service_id','type','sort_order'];
+    public $fillable = ['about_id','type','sort_order'];
 
     public function about()
     {

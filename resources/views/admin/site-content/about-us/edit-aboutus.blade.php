@@ -195,7 +195,7 @@
 
     <div class="mb-3 col-8 mb-3">
     <label for="nl_desc" class="form-label">summery</label>
-    <textarea class="form-control" name="nl[desc]" >value="{{ $abouts->translate('nl')?->desc??'' }}"</textarea>
+    <textarea class="form-control" name="nl[desc]" >{{ $abouts->translate('nl')?->desc??'' }}</textarea>
 
   </div>
 

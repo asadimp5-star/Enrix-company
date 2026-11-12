@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\MessageController;
 use App\Http\Controllers\Admin\ResorceController;
 use App\Http\Controllers\Client\HomeController;
 use App\Http\Controllers\FaqController;
+use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
 
@@ -88,13 +89,10 @@ Route::prefix('admin')->group(function(){
         // Route::post('/storee',[FirstPageController ::class,'store'])->name('admin.content.first-page.store');
 
 
-        // Route::get('/gallery',[HomeController::class,'gallery'])->name('admin.content.gallery');
-        // Route::get('/add-img',[GalleryController::class,'create'])->name('admin.content.gallery.create');
-        // Route::post('/add',[GalleryController::class,'store'])->name('admin.content.gallery.store');
-        // Route::post('/statuus/{item}',[GalleryController::class,'status'])->name('admin.content.gallery.status');
-        // Route::delete('/delette/{item}',[GalleryController::class,'destroy'])->name('admin.content.gallery.destroy');
-        // Route::get('/showw/{item}',[GalleryController::class,'edit'])->name('admin.content.gallery.edit');
-        // Route::put('/g-update/{item}',[GalleryController::class,'update'])->name('admin.content.gallery.update');
+        Route::get('/for-partner',[PartnerController::class,'index'])->name('admin.content.partner');
+        Route::post('/add',[PartnerController::class,'store'])->name('admin.content.partner.store');
+        Route::get('/for-partner-page/{id}',[PartnerController::class,'edit'])->name('admin.content.partnet.edit');
+        Route::put('/for-partner-update/{partie}',[PartnerController::class,'update'])->name('admin.content.partner.update');
 
         Route::get('/about-us',[AboutController::class,'index'])->name('admin.content.about-us');
         Route::post('/a-store',[AboutController::class,'store'])->name('admin.content.about-us.store');
