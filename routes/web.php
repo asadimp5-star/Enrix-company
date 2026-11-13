@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\MessageController;
 use App\Http\Controllers\Admin\ResorceController;
 use App\Http\Controllers\Client\HomeController;
 use App\Http\Controllers\FaqController;
+use App\Http\Controllers\FirstPageController;
 use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
@@ -83,10 +84,11 @@ Route::prefix('admin')->group(function(){
 
         Route::prefix('/content')->group(function(){
         Route::get('/index',[IndexController::class,'content'])->name('admin.content.index');
-        // Route::get('/edite/{first}',[FirstPageController::class,'edit'])->name('admin.content.first-page.edit');
-        // Route::put('/update/{first}',[FirstPageController::class,'update'])->name('admin.content.first-page.update');
-        // Route::get('/first-page',[HomeController::class,'firstPage'])->name('admin.content.first-page');
-        // Route::post('/storee',[FirstPageController ::class,'store'])->name('admin.content.first-page.store');
+
+        Route::get('/fp-edit/{id}',[FirstPageController::class,'edit'])->name('admin.content.first-page.edit');
+        Route::put('/fp-update/{first}',[FirstPageController::class,'update'])->name('admin.content.first-page.update');
+        Route::get('/first-page',[FirstPageController::class,'index'])->name('admin.content.first-page');
+        Route::post('/fp_store',[FirstPageController ::class,'store'])->name('admin.content.first-page.store');
 
 
         Route::get('/for-partner',[PartnerController::class,'index'])->name('admin.content.partner');

@@ -57,15 +57,15 @@
   <div class="col-lg-5 col-md-7 col-sm-7 p-2 "> 
     <div class="card shadow-sm rounded-4">
         <div class="col">
-         @if (1==1)
-         <a href="#">
+
+         <a href="{{ route('admin.content.first-page.edit',$firstP->id) }}">
             <div class="card card-cover h-100 overflow-hidden rounded-4 shadow-lg p1"> 
             <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"> 
               <h3 class="pt-5 mt-5 mb-4 display-6 fs-3 lh-1 TimesRoman">Home page management</h3>
             </div> 
           </div>
           </a>
-         @endif
+         
           
         </div>
       </div>

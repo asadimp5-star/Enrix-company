@@ -70,7 +70,7 @@
       </td>
     </tr>
     @empty
-    <h6>پیامی وجود ندارد</h6>
+      <h6 class="d-flex justify-content-center fs-5 text-danger">There is no article</h6>
     @endforelse
     
   </tbody>
