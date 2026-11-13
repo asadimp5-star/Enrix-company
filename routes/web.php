@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\IndexController;
 use App\Http\Controllers\Admin\MessageController;
 use App\Http\Controllers\Admin\ResorceController;
 use App\Http\Controllers\Client\HomeController;
+use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\FirstPageController;
 use App\Http\Controllers\PartnerController;
@@ -28,7 +29,7 @@ Route::prefix('admin')->group(function(){
     Route::delete('/delet/{id}',[MessageController::class,'destroy'])->name('admin.message.destroy');
 
 
-    Route::prefix('/resorces')->group(function(){
+        Route::prefix('/resorces')->group(function(){
         Route::get('/resorce',[ResorceController::class,'index'])->name('admin.resorses.resorse');
         Route::get('/search-post',[ResorceController::class,'searchPost'])->name('admin.resorces.search-post');
         Route::post('/p-status/{id}',[ResorceController::class,'status'])->name('admin.resorces.status');
@@ -40,8 +41,8 @@ Route::prefix('admin')->group(function(){
 
         
         
-    });
-    Route::prefix('users')->group(function(){
+        });
+        Route::prefix('users')->group(function(){
         // Route::get('/user',[UserController::class,'index'])->name('admin.users.user');
         // Route::post('/statu/{user}',[UserController::class,'status'])->name('admin.users.satatu');
         // Route::delete('/delete/{user}',[UserController::class,'destroy'])->name('admin.users.delete');
@@ -65,9 +66,23 @@ Route::prefix('admin')->group(function(){
 
         
 
-    });
+        });
 
-    Route::prefix('faq')->group(function(){
+        Route::prefix('/customers')->group(function(){
+            Route::get('/customer-index',[CustomerController::class,'index'])->name('admin.customer.index');
+            Route::get('/customer-add',[CustomerController::class,'create'])->name('admin.customer.add');
+            Route::post('/customer-store',[CustomerController::class,'store'])->name('admin.customer.store');
+            Route::post('/c-status/{id}',[CustomerController::class,'status'])->name('admin.customer.status');
+            Route::delete('/c-delete/{id}',[CustomerController::class,'destroy'])->name('admin.customer.delet');
+            Route::get('/c-edit/{id}',[CustomerController::class,'edit'])->name('admin.customer.edite');
+            Route::put('/c-Update/{id}',[CustomerController::class,'update'])->name('admin.customer.update');
+
+
+
+
+        });
+
+        Route::prefix('faq')->group(function(){
         Route::get('/index',[FaqController::class,'index'])->name('admin.FAQ.index');
         Route::get('/createe',[FaqController::class,'create'])->name('admin.faq.createe');
         Route::post('/storee',[FaqController::class,'store'])->name('admin.faq.store');
@@ -110,7 +125,7 @@ Route::prefix('admin')->group(function(){
         Route::get('/profile',[IndexController::class,'showProfile'])->name('admin.settings.showProfile');
         });
 
-    });
+});
     
 
     

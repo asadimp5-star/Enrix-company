@@ -18,9 +18,9 @@
 
             </section>
 
-            <section class="col-lg-8 col-md-9">
+            <section class="col-lg-9 col-md-9">
             <nav class="navbar navbar-expand-xl navbar-dark rounded-5 bg-success  col-sm-8  col-md-10" aria-label="Sixth navbar example">
-                <div class="container-fluid gap-4">
+                <div class="container-fluid gap-5">
                                         <a class="navbar-brand TimesRoman @yield('hom')" href="#">Home page</a>
                                         <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"         data-bs-target="#navbarsExample06" aria-controls="navbarsExample06" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
@@ -32,6 +32,9 @@
                                 </li>
                                 <li class="nav-item ">
                                     <a class="nav-link TimesRoman @yield('frequ')" href="#">FAQ</a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="nav-link TimesRoman @yield('custo')" href="#">customers</a>
                                 </li>
                                 <li class="nav-item ">
                                     <a class="nav-link TimesRoman @yield('conten')" href="#">Content management</a>
