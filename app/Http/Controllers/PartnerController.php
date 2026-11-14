@@ -13,7 +13,7 @@ class PartnerController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index($local)
     {
         return view('admin.site-content.for-partner.for-partner');
     }
@@ -76,7 +76,7 @@ class PartnerController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(PartnerRequest $request)
+    public function store($local,PartnerRequest $request)
     {
         $request->validated();
         $page = Partner::create([
@@ -105,7 +105,7 @@ class PartnerController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Partner $id)
+    public function edit($local,Partner $id)
     {
  
         $partie = $id;
@@ -116,7 +116,7 @@ class PartnerController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(PartnerRequest $request,$id)
+    public function update($local,PartnerRequest $request,$id)
     {
         $request->validated();
         $page = Partner::findOrFail($id);

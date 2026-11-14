@@ -13,7 +13,7 @@ class AboutController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index($local)
     {
         return view('admin.site-content.about-us.about-us');
     }
@@ -75,7 +75,7 @@ class AboutController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(AboutRequest $request)
+    public function store($local,AboutRequest $request)
     {
         $request->validated();
         $page = About::create([
@@ -104,7 +104,7 @@ class AboutController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(About $id)
+    public function edit($local,About $id)
     {
         $abouts = $id;
         return view('admin.site-content.about-us.edit-aboutus',compact('abouts'));
@@ -113,7 +113,7 @@ class AboutController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(AboutRequest $request,$id)
+    public function update($local,AboutRequest $request,$id)
     {
         $request->validated();
         $page = About::findOrFail($id);

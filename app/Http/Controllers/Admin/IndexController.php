@@ -12,13 +12,13 @@ use Illuminate\Http\Request;
 
 class IndexController extends Controller
 {
-    public function index()
+    public function index($local)
     {
         $messages = Message::orderByDesc('id')->paginate(10);
         return view('admin.dashboard',compact('messages'));
     }
 
-    public function content()
+    public function content($local)
     {
         $services = Service::first();
         $aboutus = About::first();
@@ -26,7 +26,7 @@ class IndexController extends Controller
         $firstP = Home::first();        
         return view('admin.site-content.cotent-page',compact('services','aboutus','partner','firstP'));
     }
-     public function showProfile()
+     public function showProfile($local)
      {
         return view('admin.admin-profile.admin-profile');
      }

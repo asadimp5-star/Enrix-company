@@ -14,9 +14,9 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware): void {
         $middleware->alias([
-        // 'lang'  => App\Http\Middleware\Languege::class,
+        'Languege'  => App\Http\Middleware\Languege::class,
         ]);
-        // $middleware->append(App\Http\Middleware\Languege::class);
+        $middleware->append(App\Http\Middleware\Languege::class);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //

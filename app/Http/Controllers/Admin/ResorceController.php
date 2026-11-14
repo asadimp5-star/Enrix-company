@@ -14,7 +14,7 @@ class ResorceController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index($local)
     {
         $posts = Post::orderByDesc('id')->paginate(6);
         return view('admin.posts.post',compact('posts'));
@@ -23,7 +23,7 @@ class ResorceController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create($local)
     {
         return view('admin.posts.add-post');
     }
@@ -56,7 +56,7 @@ class ResorceController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(PostRequest $request)
+    public function store($local,PostRequest $request)
     {
         $data =$request->validated();
         
@@ -94,7 +94,7 @@ class ResorceController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit( $id)
+    public function edit($local, $id)
     {
         $post = Post::findOrFail($id);
         return view('admin.posts.edit-post',compact('post'));
@@ -103,7 +103,7 @@ class ResorceController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(PostRequest $request, $id)
+    public function update($local,PostRequest $request, $id)
     {
         
         $poste = Post::findOrFail($id);
@@ -134,14 +134,14 @@ class ResorceController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy( $id)
+    public function destroy($local, $id)
     {
         $poste = Post::findOrFail($id);
         $poste->delete();
         return to_route('admin.resorses.resorse')->with('success','Post successfully deleted');
     }
 
-    public function status($id)
+    public function status($local,$id)
     {
         $item = Post::findOrFail($id);
        
@@ -152,7 +152,7 @@ class ResorceController extends Controller
         return to_route('admin.resorses.resorse')->with('success','The status change was successful.');
     }
 
-    public function searchPost(Request $request)
+    public function searchPost($local,Request $request)
     {
         $search = $request->search;
         $posts = Post::with('translations')->whereHas('translations',function($q) use ($search) {

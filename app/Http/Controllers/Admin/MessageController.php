@@ -20,7 +20,7 @@ class MessageController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create(MessageRequest $request)
+    public function create($local,MessageRequest $request)
     {
         $data = $request->validated();
         Message::create($data);
@@ -38,7 +38,7 @@ class MessageController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Message $id)
+    public function show($local,Message $id)
     {
         $messages = Message::find($id);
         return view('admin.message-show',compact('messages'));
@@ -63,7 +63,7 @@ class MessageController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Message $id)
+    public function destroy($local,Message $id)
     {
         $id->delete();
         return to_route('/admin')->with('success','Deleted successfully.');

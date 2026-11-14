@@ -13,7 +13,7 @@ class FirstPageController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index($local)
     {
         return view('admin.site-content.first-page.first-page');        
     }
@@ -76,7 +76,7 @@ class FirstPageController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(HomeRequest $request)
+    public function store($local,HomeRequest $request)
     {
         $request->validated();
         $page = Home::create([
@@ -105,7 +105,7 @@ class FirstPageController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Home $id)
+    public function edit($local,Home $id)
     {
         $first = $id;
         return view('admin.site-content.first-page.edit-first-page',compact('first'));
@@ -114,7 +114,7 @@ class FirstPageController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(HomeRequest $request,$id)
+    public function update($local,HomeRequest $request,$id)
     {
         $request->validated();
         $page = Home::findOrFail($id);

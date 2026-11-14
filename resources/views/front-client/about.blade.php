@@ -10,17 +10,17 @@
 <section data-dc-tpl="5" class="aboutHero">
 <div data-dc-tpl="6" class="aboutHeroImg"><img src="#" alt="Warm, professional photo of Mahsa"> </div>
 <div data-dc-tpl="7" class="aboutHeroDiv">
-<p data-dc-tpl="8" class="secName">Introduction</p>
+<p data-dc-tpl="8" class="secName">{{ __('content.Introduction') }}</p>
 <h1 data-dc-tpl="9" class="aboutHeroTitle">Hi, I'm Mahsa</h1>
 <hr class="bg">
 <p data-dc-tpl="10" class="aboutHeroDesc">Founder of Enrix. I help early-stage startups find and win the grants that fit their plans. [Adjust to your own words.]</p>
-<a data-dc-tpl="11" href="#getTouch" class="introCall">Book a free intro call</a>
+<a data-dc-tpl="11" href="#getTouch" class="introCall">{{ __('content.Book a free intro call') }}</a>
 </div>
 </section>
 
 <section data-dc-tpl="12" class="aboutStory">
     <div data-dc-tpl="13" class="aboutStoryDiv">
-<p data-dc-tpl="14" class="secName">My story</p>
+<p data-dc-tpl="14" class="secName">{{ __('content.My story') }}</p>
 <h2 data-dc-tpl="15" class="aboutStoryDivTitle">Why I started Enrix</h2>
 <p data-dc-tpl="16" class="aboutStoryDivItem"><span class="text-danger">✓</span>[Paragraph 1: your background and how you came to work with startups and grants.]</p>
 <p data-dc-tpl="17" class="aboutStoryDivItem"><span class="text-danger">✓</span>[Paragraph 2: what you noticed startups struggle with when it comes to funding.]</p>
@@ -29,7 +29,7 @@
 </section>
 
 <section data-dc-tpl="19" class="aboutApproach">
-<p data-dc-tpl="20" class="secName">My approach</p>
+<p data-dc-tpl="20" class="secName">{{ __('content.My approach') }}</p>
 <h2 data-dc-tpl="21" class="aboutStoryDivTitle">How I work with startups</h2>
 <div data-dc-tpl="22" style="display: flex; flex-wrap: wrap; gap: 24px;"><div data-dc-tpl="23" class="aboutApproachDiv">
 <h3 data-dc-tpl="24" class="aboutApproachDivTitle">Relationship first</h3>
@@ -48,7 +48,7 @@
 
 <section data-dc-tpl="32" class="howCan">
 <div data-dc-tpl="33" class="aboutCreadit">
-<p data-dc-tpl="34" class="secName">Credentials &amp; results</p>
+<p data-dc-tpl="34" class="secName">{{ __('content.Credentials & results') }}</p>
 <h2 data-dc-tpl="35" class="aboutStoryDivTitle">Background</h2>
 <div data-dc-tpl="36" class="aboutCreaditDiv">
 <div data-dc-tpl="37" class="aboutCreaditDivItem">
@@ -70,12 +70,11 @@
 </section>
 
 <section data-dc-tpl="48" class="aboutCase">
-<p data-dc-tpl="49" class="secName">Case stories</p>
+<p data-dc-tpl="49" class="secName">{{ __('content.Case stories') }}</p>
 <h2 data-dc-tpl="50" class="aboutStoryDivTitle">Startups I've helped</h2>
 <p data-dc-tpl="51" class="aboutCaseP">Shared with each client's permission.</p>
 <div data-dc-tpl="52" class="aboutCaseDive">
 <div data-dc-tpl="53" class="aboutCaseDiveItem">
-<p data-dc-tpl="54" class="aboutCaseDiveItemTitle">MIT Haalbaarheid</p>
 <h3 data-dc-tpl="55" class="aboutCaseDiveItemTitle1">[Client name or "an early-stage startup in X"]</h3>
 <p data-dc-tpl="56" class="aboutApproachDivDesc">
 <strong data-dc-tpl="57" style="color: rgb(19, 35, 58);">Challenge:</strong> [one sentence]</p>
@@ -86,7 +85,6 @@
 <p data-dc-tpl="62" class="aboutApproachDivp2">"[Short client quote]"</p>
 </div>
 <div data-dc-tpl="63" class="aboutCaseDiveItem">
-<p data-dc-tpl="64" class="aboutCaseDiveItemTitle">SVOM</p>
 <h3 data-dc-tpl="65" class="aboutCaseDiveItemTitle1">[Client name or "an early-stage startup in X"]</h3>
 <p data-dc-tpl="66" class="aboutApproachDivDesc">
 <strong data-dc-tpl="67" style="color: rgb(19, 35, 58);">Challenge:</strong> [one sentence]</p>

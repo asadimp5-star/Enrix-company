@@ -13,7 +13,7 @@ class CustomerController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index($local)
     {
         $customers = Customer::orderByDesc('id')->paginate(5);
         return view('admin.customers.customer',compact('customers'));
@@ -22,7 +22,7 @@ class CustomerController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create($local)
     {
         return view('admin.customers.add-customer');
     }
@@ -53,7 +53,7 @@ class CustomerController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(CustomerRequest $request)
+    public function store($local,CustomerRequest $request)
     {
         $data =$request->validated();
         
@@ -85,7 +85,7 @@ class CustomerController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit($id)
+    public function edit($local,$id)
     {
         $customr = Customer::findOrFail($id);
         return view('admin.customers.edit-customer',compact('customr'));
@@ -94,7 +94,7 @@ class CustomerController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(CustomerRequest $request,$id)
+    public function update($local,CustomerRequest $request,$id)
     {
         $poste = Customer::findOrFail($id);
         $data = $request->validated();
@@ -117,14 +117,14 @@ class CustomerController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy($id)
+    public function destroy($local,$id)
     {
         $poste = Customer::findOrFail($id);
         $poste->delete();
         return to_route('admin.customer.delet')->with('success','customer successfully deleted');
     }
 
-    public function status($id)
+    public function status($local,$id)
     {
         $item = Customer::findOrFail($id);
        
@@ -135,7 +135,7 @@ class CustomerController extends Controller
         return to_route('admin.customer.index')->with('success','The status change was successful.');
     }
 
-    public function searchQue(Request $request)
+    public function searchQue($local,Request $request)
     {
         $search = $request->search;
         $customers = Customer::with('translations')->whereHas('translations',function($q) use ($search) {

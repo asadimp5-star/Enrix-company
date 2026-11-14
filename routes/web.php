@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
-// Route::prefix('{locale}')->where(['locale'=>'en|nl'])->group(function(){});
+Route::prefix('{local}')->where(['local'=>'en|nl'])->group(function(){
 
 Route::prefix('admin')->group(function(){
     Route::get('/',[IndexController::class,'index'])->name('/admin');
@@ -126,13 +126,6 @@ Route::prefix('admin')->group(function(){
 });
     
 
-    
-
-    
-
-
-
-
 Route::get('/home',[HomeController::class,'index'])->name('home');
 Route::get('/services',[HomeController::class,'services'])->name('services');
 Route::get('/for-partners',[HomeController::class,'partners'])->name('partners');
@@ -140,7 +133,7 @@ Route::get('/about',[HomeController::class,'about'])->name('about');
 Route::get('/resorces',[HomeController::class,'resorces'])->name('resorces');
 Route::get('/contact',[HomeController::class,'contact'])->name('contact');
 Route::get('/article',[HomeController::class,'article'])->name('article');
-
+});
 
 Route::middleware([
     'auth:sanctum',

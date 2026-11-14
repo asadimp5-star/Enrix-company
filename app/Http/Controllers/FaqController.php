@@ -11,7 +11,7 @@ class FaqController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index($local)
     {
         $quests = Faq::orderByDesc('id')->paginate(8);
         return view('admin.faq.faq-list',compact('quests'));
@@ -20,7 +20,7 @@ class FaqController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create($local)
     {
         return view('admin.faq.add-faq');
     }
@@ -28,7 +28,7 @@ class FaqController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(FaqRequest $request)
+    public function store($local,FaqRequest $request)
     {
          
         $data = $request->validated();
@@ -55,7 +55,7 @@ class FaqController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit( $id)
+    public function edit($local, $id)
     {
         $quests = Faq::find($id);
         return view('admin.faq.edit-faq',compact('quests'));
@@ -64,7 +64,7 @@ class FaqController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(FaqRequest $request, $id)
+    public function update($local,FaqRequest $request, $id)
     {
         $frequ =Faq::findOrFail($id);
 
@@ -83,14 +83,14 @@ class FaqController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy( $id)
+    public function destroy($local, $id)
     {
         $poste = Faq::findOrFail($id);
         $poste->delete();
         return to_route('admin.FAQ.index')->with('success','Post successfully deleted');
     }
 
-    public function status($id)
+    public function status($local,$id)
     {
         $item = Faq::findOrFail($id);
        
@@ -100,7 +100,7 @@ class FaqController extends Controller
         
         return to_route('admin.FAQ.index')->with('success','The status change was successful.');
     }
-    public function searchQue(Request $request)
+    public function searchQue($local,Request $request)
     {
         $search = $request->search;
         $quests = Faq::with('translations')->whereHas('translations',function($q) use ($search) {

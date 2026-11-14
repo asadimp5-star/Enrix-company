@@ -18,25 +18,25 @@ class Languege
      */
     public function handle(Request $request, Closure $next): Response
     {
-        //  if($request->path()=='/' || empty($request->segment(1)))
-        // {
-        //     return to_route('home');
-        // }
+         if($request->path()=='/' || empty($request->segment(1)))
+        {
+            return to_route('home');
+        }
         
-        // $locale = $request->segment(1);
+        $local = $request->segment(1);
         
-        // if(!array_key_exists($locale ,config('app.locales'))){
-        //    $segment = $request->segments();
+        if(!array_key_exists($local ,config('app.locales'))){
+           $segment = $request->segments();
             
             
-        //     $segment[0] = config('app.locale');
+            $segment[0] = config('app.locale');
            
-        //     return redirect(implode('/',$segment));   
+            return redirect('/'.implode('/',$segment));   
            
-        // }
-        //    App::setLocale($locale);
-        //    Session::put('locale',$locale);
-        //    URL::defaults(['locale' => $locale]);
+        }
+           App::setLocale($local);
+           Session::put('local',$local);
+           URL::defaults(['local' => $local]);
         
         return $next($request);
     }

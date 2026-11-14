@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class ServiceController extends Controller
 {
-    public function serviceIndx()
+    public function serviceIndx($local)
     {
         return view('admin.site-content.services.services');
     }
@@ -35,7 +35,7 @@ class ServiceController extends Controller
         }
     }
 
-    public function store(Request $request)
+    public function store($local,Request $request)
     {
         
         $request->all();
@@ -52,13 +52,13 @@ class ServiceController extends Controller
         return to_route('admin.content.services')->with('success','ok');
     }
 
-    public function servicePage(Service $id)
+    public function servicePage($local,Service $id)
     {
         $serve = $id;
         return view('admin.site-content.services.services-edit',compact('serve'));        
     }
 
-    public function update(Request $request,$id)
+    public function update($local,Request $request,$id)
     {
         
         $page = Service::findOrFail($id);

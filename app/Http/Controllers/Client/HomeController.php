@@ -7,38 +7,38 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function index()
+    public function index($local)
     {
         return view('front-client.home');
 
     }
 
-    public function services()
+    public function services($local)
     {
         return view('front-client.services');
     }
 
-    public function partners()
+    public function partners($local)
     {
         return view('front-client.forPartners');
     }
 
-    public function about()
+    public function about($local)
     {
         return view('front-client.about');
     }
 
-    public function resorces()
+    public function resorces($local)
     {
         return view('front-client.resorces');
     }
 
-    public function contact()
+    public function contact($local)
     {
         return view('front-client.cotnact');
     }
 
-    public function article()
+    public function article($local)
     {
         return view('front-client.article');
     }
