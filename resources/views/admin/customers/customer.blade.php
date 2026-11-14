@@ -19,7 +19,7 @@
 <section class="mt-5" style="margin:1rem;">
     
     <section class=" mb-5">
-      <form class="form-inline d-flex justify-content-center my-2 my-lg-0 col-lg-4 col-md-8 " action="#" method="get">
+      <form class="form-inline d-flex justify-content-center my-2 my-lg-0 col-lg-4 col-md-8 " action="{{ route('admin.customer.search') }}" method="get">
         @csrf
       <input class="form-control mr-sm-2" type="search" name="search" placeholder="searching..." aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">search</button>

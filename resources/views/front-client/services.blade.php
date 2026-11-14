@@ -2,7 +2,7 @@
 
 @section('title',app()->getLocale() == 'en' ? 'Enrix Company services' : 'Enrix Company services')
 
-@section('serv','active')
+@section('Servi','activ')
 
 
 @section('content')
@@ -11,7 +11,7 @@
 <p data-dc-tpl="8" class="secName">Service intro</p>
 <h1 data-dc-tpl="9" class="servTitle">Grant writing for early-stage startups</h1>
 <p data-dc-tpl="10" class="servDesc">[One or two sentences: what this service does for the startup, in your own words.]</p>
-<a data-dc-tpl="11" href="#" class="introCall">Book an intro call</a>
+<a data-dc-tpl="11" href="#getTouch" class="introCall">Book an intro call</a>
 </section>
 
 <section data-dc-tpl="12" class="servFor">
@@ -84,7 +84,7 @@
 </div>
 </section>
 
-<section data-dc-tpl="60" class="servFaq">
+<section data-dc-tpl="60" class="servFaq" id="FAQs">
 <p data-dc-tpl="61" class="secName">FAQ</p>
 <div data-dc-tpl="62" class="servFaqDiv">
 <div data-dc-tpl="63" class="servFaqSec">

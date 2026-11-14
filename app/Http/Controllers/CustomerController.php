@@ -134,4 +134,15 @@ class CustomerController extends Controller
         
         return to_route('admin.customer.index')->with('success','The status change was successful.');
     }
+
+    public function searchQue(Request $request)
+    {
+        $search = $request->search;
+        $customers = Customer::with('translations')->whereHas('translations',function($q) use ($search) {
+            $q->where('title','LIKE', "%{$search}%");
+        })->paginate(5);
+        
+        return view('admin.customers.customer' , compact('customers'));
+
+    }
 }

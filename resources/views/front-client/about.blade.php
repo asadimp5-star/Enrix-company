@@ -2,7 +2,7 @@
 
 @section('title',app()->getLocale() == 'en' ? 'Enrix Company about' : 'Enrix Company about')
 
-@section('abo','active')
+@section('Abou','activ')
 
 
 @section('content')
@@ -14,7 +14,7 @@
 <h1 data-dc-tpl="9" class="aboutHeroTitle">Hi, I'm Mahsa</h1>
 <hr class="bg">
 <p data-dc-tpl="10" class="aboutHeroDesc">Founder of Enrix. I help early-stage startups find and win the grants that fit their plans. [Adjust to your own words.]</p>
-<a data-dc-tpl="11" href="#" class="introCall">Book a free intro call</a>
+<a data-dc-tpl="11" href="#getTouch" class="introCall">Book a free intro call</a>
 </div>
 </section>
 

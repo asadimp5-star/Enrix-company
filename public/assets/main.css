@@ -31,6 +31,9 @@ nav{
 .navItem{
   color: #C9A66B; text-decoration: none;
 }
+.navItem.activ{
+  color: #e7aa3f!important; text-decoration: none;border-bottom: 2px solid #FF2A00;font-weight: bold;
+}
 .headerdiv2{
   display: flex; align-items: center; gap: 16px;
 }

@@ -2,7 +2,7 @@
 
 @section('title',app()->getLocale() == 'en' ? 'Enrix Company Home' : 'Enrix Company Home')
 
-@section('hom','active')
+@section('HOM','activ')
 
 
 @section('content')
@@ -13,8 +13,8 @@
 <hr class="bg">
 <p data-dc-tpl="22" class="heroP">Grant writing and strategic advisory for startups in the Netherlands — from MIT and WBSO to SVOM, EIC and Eurostars.</p>
 <div data-dc-tpl="23" class="heroDiv1">
-<a data-dc-tpl="24" href="#" class="introCall">Book an intro call</a>
-<a data-dc-tpl="25" href="#" class="heroA1">See services</a>
+<a data-dc-tpl="24" href="#getTouch" class="introCall">Book an intro call</a>
+<a data-dc-tpl="25" href="{{ route('services') }}" class="heroA1">See services</a>
 </div>
 </div>
 <div data-dc-tpl="26" class="heroImg">

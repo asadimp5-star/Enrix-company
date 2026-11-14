@@ -2,7 +2,7 @@
 
 @section('title',app()->getLocale() == 'en' ? 'Enrix Company for partners' : 'Enrix Company for partners')
 
-@section('partn','active')
+@section('partn','activ')
 
 
 @section('content')
@@ -13,7 +13,7 @@
 <h1 data-dc-tpl="8" class="partnerHeroTitle">For accelerators and startup hubs</h1>
 <hr class="bg">
 <p data-dc-tpl="9" class="partnerHeroDesc">Give your startups practical, up-to-date knowledge about Dutch and EU grants, and a trusted expert to turn to. [Adjust to your own words.]</p>
-<a data-dc-tpl="10" href="#" class="introCall">Let's talk about a partnership</a>
+<a data-dc-tpl="10" href="#getTouch" class="introCall">Let's talk about a partnership</a>
 </div>
 <div data-dc-tpl="11" class="partnerHeroImg">
     <img src="#" alt="photo">

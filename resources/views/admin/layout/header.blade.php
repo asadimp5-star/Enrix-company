@@ -11,7 +11,7 @@
         <section class="d-flex">
             
             <section class="col-4">
-                    <a href="#" class="text-decoration-none d-flex align-items-center">
+                    <a href="{{ route('/admin') }}" class="text-decoration-none d-flex align-items-center">
                         <img  src="#" class="img-thumbnail " alt="image logo" width="90" height="60">     
                         <h3 class="mt-1 ">Enrix</h3>
                     </a>
@@ -21,23 +21,23 @@
             <section class="col-lg-9 col-md-9">
             <nav class="navbar navbar-expand-xl navbar-dark rounded-5 bg-success  col-sm-8  col-md-10" aria-label="Sixth navbar example">
                 <div class="container-fluid gap-5">
-                                        <a class="navbar-brand TimesRoman @yield('hom')" href="#">Home page</a>
+                                        <a class="navbar-brand TimesRoman @yield('hom')" href="{{ route('/admin') }}">Home page</a>
                                         <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"         data-bs-target="#navbarsExample06" aria-controls="navbarsExample06" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="navbar-collapse collapse" id="navbarsExample06">
                             <ul class="navbar-nav me-auto  mb-2 mb-xl-0">
                                 <li class="nav-item"> 
-                                    <a class="nav-link TimesRoman @yield('pos')" aria-current="page" href="#">Resorces</a>
+                                    <a class="nav-link TimesRoman @yield('pos')" aria-current="page" href="{{ route('admin.resorses.resorse') }}">Resorces</a>
                                 </li>
                                 <li class="nav-item ">
-                                    <a class="nav-link TimesRoman @yield('frequ')" href="#">FAQ</a>
+                                    <a class="nav-link TimesRoman @yield('frequ')" href="{{ route('admin.FAQ.index') }}">FAQ</a>
                                 </li>
                                 <li class="nav-item ">
-                                    <a class="nav-link TimesRoman @yield('custo')" href="#">customers</a>
+                                    <a class="nav-link TimesRoman @yield('custo')" href="{{ route('admin.customer.index') }}">customers</a>
                                 </li>
                                 <li class="nav-item ">
-                                    <a class="nav-link TimesRoman @yield('conten')" href="#">Content management</a>
+                                    <a class="nav-link TimesRoman @yield('conten')" href="{{ route('admin.content.index') }}">Content management</a>
                                 </li>
                                 <li class="nav-item dropdown "> 
                                     <a class="nav-link dropdown-toggle TimesRoman @yield('seting')" href="#" data-bs-toggle="dropdown" aria-expanded="false">setting</a>

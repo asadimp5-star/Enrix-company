@@ -2,7 +2,7 @@
 
 @section('title',app()->getLocale() == 'en' ? 'Enrix Company contact' : 'Enrix Company contact')
 
-@section('cont','active')
+@section('Conta','activ')
 
 
 @section('content')
@@ -13,7 +13,7 @@
 <hr class="bg w-25">
 <p data-dc-tpl="8" class="resorceHeroDesc">Whether you're a startup looking for funding or an accelerator exploring a partnership, I'd love to hear from you. [Adjust to your own words.]</p>
 </section>
-<section data-dc-tpl="9" class="contact">
+<section data-dc-tpl="9" class="contact" id="formC">
 <div data-dc-tpl="10" class="contactDiv1">
 <p data-dc-tpl="11" class="secName">Contact form</p>
 <h2 data-dc-tpl="12" class="contactFormTitle">Send me a message</h2>

@@ -2,7 +2,7 @@
 
 @section('title',app()->getLocale() == 'en' ? 'Enrix Company resorces' : 'Enrix Company resorces')
 
-@section('resor','active')
+@section('Resou','activ')
 
 
 @section('content')

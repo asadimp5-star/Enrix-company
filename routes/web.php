@@ -20,11 +20,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::prefix('admin')->group(function(){
     Route::get('/',[IndexController::class,'index'])->name('/admin');
-    // Route::post('/status/{comment}',[CommentController::class,'status'])->name('admin.comment.status');
-    // Route::delete('/delete/{comment}',[CommentController::class,'destroy'])->name('admin.comment.destroy');
     Route::post('/show-message/{id}',[MessageController::class,'show'])->name('admin.comment.show');
-    // Route::put('/reply/{item}',[CommentController::class,'update'])->name('admin.comment.update');
-    // Route::get('/',[HomeController::class,'index'])->name('/admin');
     Route::post('/message',[MessageController::class,'create'])->name('admin.message.create');
     Route::delete('/delet/{id}',[MessageController::class,'destroy'])->name('admin.message.destroy');
 
@@ -76,6 +72,8 @@ Route::prefix('admin')->group(function(){
             Route::delete('/c-delete/{id}',[CustomerController::class,'destroy'])->name('admin.customer.delet');
             Route::get('/c-edit/{id}',[CustomerController::class,'edit'])->name('admin.customer.edite');
             Route::put('/c-Update/{id}',[CustomerController::class,'update'])->name('admin.customer.update');
+            Route::get('/c-search',[CustomerController::class,'searchQue'])->name('admin.customer.search');
+
 
 
 
