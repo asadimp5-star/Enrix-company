@@ -189,7 +189,7 @@ footer a{
   margin: 0px 0px 20px; color: rgb(74, 85, 104);
 }
 .work{
-  max-width: 1120px; margin: 0px auto; padding: 72px 24px;
+  max-width: 1120px; margin: 0px auto; padding: 72px 24px;background: rgb(204, 240, 237); border-radius: 20px;
 }
 
 .workH2{

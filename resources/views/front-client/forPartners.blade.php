@@ -128,15 +128,20 @@
     <section data-dc-tpl="56" class="partnerTest">
 <p data-dc-tpl="57" class="secName">{{ __('content.Partners & testimonial') }}</p>
 <h2 data-dc-tpl="58" class="partnerWorkTitle">Organisations I've worked with</h2>
-<div data-dc-tpl="59" class="partnerTestDiv">
-<div data-dc-tpl="60" class="partnerTestDivItem">[Partner logo]</div>
-<div data-dc-tpl="61" class="partnerTestDivItem">[Partner logo]</div>
-<div data-dc-tpl="62" class="partnerTestDivItem">[Partner logo]</div>
+
+<div data-dc-tpl="27" class="resorceListArt">
+<div data-dc-tpl="29" class="resorceListArtOne">
+<div data-dc-tpl="30" class="resorceListArtImg">
+    <img src="#" alt="[Image]">
+    </div>
+<div data-dc-tpl="31" class="resorceListArtDiv">
+<h3 data-dc-tpl="33" class="resorceListArtDivTitle">[title]</h3>
+<p data-dc-tpl="34" class="resorceListArtDivSum">[One-line summary]</p>
+
 </div>
-<div data-dc-tpl="63" class="partnerTestDiv1">
-<p data-dc-tpl="64" class="partnerTestDiv1P">"[Short quote from a programme manager about working with you]"</p>
-<p data-dc-tpl="65" class="partnerTestDiv1P1">[Name], [role] at [organisation] — only with permission</p>
 </div>
+</div>
+
     </section>
 
 @endsection

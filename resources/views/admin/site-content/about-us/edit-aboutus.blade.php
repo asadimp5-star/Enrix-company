@@ -157,32 +157,7 @@
     
     </div>
   </div>  
-
-    <div>
-      @php 
-        $block3 = $abouts->blocks[3] ?? null;
-      @endphp
-    <input type="hidden" class="form-control"  name="blocks[3][type]" value="pill">
-
-    <div class="col-md-4 mb-3">
-    <label class="form-label d-block ">Case stories</label>
-   <input type="text" class="form-control" name="blocks[3][en][lable]" value="{{ $block3->translate('en')->lable ?? '' }}">
-    </div>
-
-    <div class="col-md-4 mb-3">
-    <label for="en_title"  class="form-label d-block ">pills</label>
-
-    <input type="text" class="form-control"  name="blocks[3][en][items][]" value="{{ $block3?->translate('en')?->items[0] ?? '' }}">
-    <input type="text" class="form-control"  name="blocks[3][en][items][]" value="{{ $block3?->translate('en')?->items[1] ?? '' }}">
-    <br>
-    <input type="text" class="form-control"  name="blocks[3][en][items][]" value="{{ $block3?->translate('en')?->items[2] ?? '' }}">
-    <input type="text" class="form-control"  name="blocks[3][en][items][]" value="{{ $block3?->translate('en')?->items[3] ?? '' }}">
-    <br>
-    
-    </div>
-    </div>
-
-    
+   
 
        </div>
 
@@ -266,30 +241,7 @@
     
     </div>
     </div>
-    
-
-    <div>
-      @php 
-        $block2 = $abouts->blocks[3] ?? null;
-      @endphp
-      <div class="col-md-4 mb-3">
-    <label class="form-label d-block ">Case stories</label>
-   <input type="text" class="form-control" name="blocks[3][nl][lable]" value="{{ $block2->translate('nl')->lable ?? ''}}">
-    </div>
-
-    <div class="col-md-4 mb-3">
-    <label for="en_title"  class="form-label d-block ">pills</label>
-
-    <input type="text" class="form-control"  name="blocks[3][nl][items][]" value="{{ $block2?->translate('nl')?->items[0] ?? '' }}">
-    <input type="text" class="form-control"  name="blocks[3][nl][items][]" value="{{ $block2?->translate('nl')?->items[1] ?? '' }}">
-    <br>
-    <input type="text" class="form-control"  name="blocks[3][nl][items][]" value="{{ $block2?->translate('nl')?->items[2] ?? '' }}">
-    <input type="text" class="form-control"  name="blocks[3][nl][items][]" value="{{ $block2?->translate('nl')?->items[3] ?? '' }}">
-    <br>
-    
-    </div>
-    </div>
-    
+      
 
       
     

@@ -10,6 +10,7 @@ use App\Http\Controllers\FaqController;
 use App\Http\Controllers\FirstPageController;
 use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\StorieController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -77,6 +78,16 @@ Route::prefix('admin')->group(function(){
 
 
 
+
+        });
+
+        Route::prefix('/stories')->group(function(){
+            Route::get('/story-add',[StorieController::class,'create'])->name('admin.storie.add');
+            Route::post('/story-store',[StorieController::class,'store'])->name('admin.storie.store');
+            Route::post('/story-status/{id}',[StorieController::class,'status'])->name('admin.storie.status');
+            Route::delete('/story-delete/{id}',[StorieController::class,'destroy'])->name('admin.storie.delet');
+            Route::get('/story-edit/{id}',[StorieController::class,'edit'])->name('admin.storie.edite');
+            Route::put('/story-Update/{id}',[StorieController::class,'update'])->name('admin.storie.update');
 
         });
 

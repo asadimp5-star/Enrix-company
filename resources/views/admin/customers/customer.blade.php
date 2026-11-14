@@ -100,6 +100,82 @@
   </tbody>
 </table>
 <div class="col-3 pe-5">{{ $customers->links() }}</div>
+<hr>
+</section>
+
+
+<section class="mt-5" style="margin:1rem;">
+    <br>
+
+    <section >
+      <div class="container-fluid col-lg-2 col-md-12  float-end bg-success rounded-3 text-center "style="margin-right:1rem;">
+            <div>
+                <div class="p-3"><h6 class="shabnam" style="color: antiquewhite;">Case stories</h6></div>
+            </div>
+    
+    </div>
+    <a href="{{ route('admin.storie.add') }}">
+      <div class="container-fluid col-lg-2 col-md-12  float-start bg-primary rounded-3 text-center"style="margin-left:1rem;">
+            <div>
+                <div class="p-3"><h6 class=" shabnam" style="color: antiquewhite;">Add new story</h6></div>
+            </div>
+    
+      </div>
+    </a>
+    </section>
+    
+    
+    
+    <table class="table table-striped table-hover">
+  <thead>
+    <tr class="shabnam fs-6">
+      <th scope="col">#</th>
+      <th scope="col">Case name</th>
+      <th scope="col">Summary</th>
+      <th scope="col">Date</th>
+      <th scope="col">Status</th>
+      <th scope="col">Operation</th>
+    </tr>
+  </thead>
+  <tbody>
+    @forelse($Stories as $Storie)
+    <tr>
+      <td>{{ $loop->iteration }}</td>
+      <td>{{ substr($Storie->translations->where('locale','en')->first()?->title?? 'none title',0,15)}}</td>
+      <td>{{ substr($Storie->translations->where('locale','en')->first()->desc??'',0,30).'...' }}</td>
+      <td>{{ $Storie->created_at }}</td>
+      <td><span class="badge {{ $Storie->status== 1 ? 'bg-success' : 'bg-danger' }}">
+            {{ $Storie->status== 1 ? 'Activ' : 'Inactiv'}}
+      </span></td>
+      <td>
+        <section class="d-flex">
+
+                                <form class="mt-1" action="{{ route('admin.storie.status',$Storie->id) }}" method="post">
+                                @csrf
+                                <button type="submit" class="btn btn-outline-success ">Change of status</button>
+                                </form>
+
+
+                                <form action="{{ route('admin.storie.delet',$Storie->id) }}" method="post">
+                                 @csrf
+                                 @method('DELETE') 
+                                <button type="submit" onclick="return confirm('Are you sure?')" class="btn btn-outline-danger m-1">Delete</button>
+                                </form>
+                                
+                                <a href="{{ route('admin.storie.edite',$Storie->id) }}" class="btn btn-outline-primary m-1">View and edit</a>
+                                
+                              </section>
+                              
+      </td>
+    </tr>
+    @empty
+    <h6 class="d-flex justify-content-center fs-5 text-danger">There is no Story</h6>
+    @endforelse
+  <tbody>
+   
+  </tbody>
+</table>
+<div class="col-3 pe-5">{{ $Stories->links() }}</div>
 </section>
 
 

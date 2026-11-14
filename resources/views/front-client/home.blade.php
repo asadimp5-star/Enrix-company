@@ -22,40 +22,6 @@
 </div>
 </section>
 
-<section data-dc-tpl="27" class="results">
-<div data-dc-tpl="28" class="resultsDiv">
-<div data-dc-tpl="29">
-<p data-dc-tpl="30" class="secName">{{ __('content.Results strip') }}</p>
-<p data-dc-tpl="31" class="resultsP1">
-    <span class="text-danger">&#x201C;</span>
-    Let's explore what fits your programme
-    <span class="text-danger">&#x201E;</span>
-</p>
-</div>
-<div data-dc-tpl="32" class="resultsDiv1">
-<div data-dc-tpl="33" class="resultsClient">[Client logo]</div>
-<div data-dc-tpl="34" class="resultsClient">[Client logo]</div>
-<div data-dc-tpl="35" class="resultsClient">[Partner logo]</div>
-</div>
-</div>
-</section>
-
-<section data-dc-tpl="36" class="help">
-<p data-dc-tpl="37" class="secName">{{ __('content.Who I help') }}</p>
-<h2 data-dc-tpl="38" class="helpH2">Two kinds of people I work with</h2>
-<div data-dc-tpl="39" class="helpDiv">
-<div data-dc-tpl="40" class="helpDiv1">
-<h3 data-dc-tpl="41" class="helpH3">Early-stage startups</h3>
-<p data-dc-tpl="42" class="helpP1">You have an innovative idea and need funding to test or build it. I find the grants that fit and write the application with you.</p>
-
-</div>
-<div data-dc-tpl="44" class="helpDiv1">
-    <h3 data-dc-tpl="45" class="helpH3">Accelerators &amp; startup hubs</h3>
-<p data-dc-tpl="46" class="helpP1">You support startups and want to give your cohort practical funding knowledge. Let's explore how we can work together.</p>
-
-</div>
-</div>
-</section>
 
 <section data-dc-tpl="48" class="howCan">
 <div data-dc-tpl="49" class="howCanDiv">
@@ -81,7 +47,28 @@
 </div>
 </section>
 
-<section data-dc-tpl="61" class="work">
+
+
+<section data-dc-tpl="36" class="help">
+<p data-dc-tpl="37" class="secName">{{ __('content.Who I help') }}</p>
+<h2 data-dc-tpl="38" class="helpH2">Two kinds of people I work with</h2>
+<div data-dc-tpl="39" class="helpDiv">
+<div data-dc-tpl="40" class="helpDiv1">
+<h3 data-dc-tpl="41" class="helpH3">Early-stage startups</h3>
+<p data-dc-tpl="42" class="helpP1">You have an innovative idea and need funding to test or build it. I find the grants that fit and write the application with you.</p>
+
+</div>
+<div data-dc-tpl="44" class="helpDiv1">
+    <h3 data-dc-tpl="45" class="helpH3">Accelerators &amp; startup hubs</h3>
+<p data-dc-tpl="46" class="helpP1">You support startups and want to give your cohort practical funding knowledge. Let's explore how we can work together.</p>
+
+</div>
+</div>
+</section>
+
+
+
+<section data-dc-tpl="61" class="work mb-2">
 <p data-dc-tpl="62" class="secName">{{ __('content.How I work') }}</p>
 <h2 data-dc-tpl="63" class="workH2">A clear, personal process</h2>
 <div data-dc-tpl="64" class="workDiv">

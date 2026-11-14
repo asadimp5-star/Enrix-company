@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CustomerRequest;
 use App\Models\Customer;
+use App\Models\Storie;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -15,8 +16,9 @@ class CustomerController extends Controller
      */
     public function index($local)
     {
-        $customers = Customer::orderByDesc('id')->paginate(5);
-        return view('admin.customers.customer',compact('customers'));
+        $customers = Customer::orderByDesc('id')->paginate(8);
+        $Stories = Storie::orderByDesc('id')->paginate(8);
+        return view('admin.customers.customer',compact('customers','Stories'));
     }
 
     /**
@@ -121,7 +123,7 @@ class CustomerController extends Controller
     {
         $poste = Customer::findOrFail($id);
         $poste->delete();
-        return to_route('admin.customer.delet')->with('success','customer successfully deleted');
+        return to_route('admin.customer.index')->with('success','customer successfully deleted');
     }
 
     public function status($local,$id)
@@ -141,8 +143,11 @@ class CustomerController extends Controller
         $customers = Customer::with('translations')->whereHas('translations',function($q) use ($search) {
             $q->where('title','LIKE', "%{$search}%");
         })->paginate(5);
+        $Stories = Storie::with('translations')->whereHas('translations',function($q) use ($search) {
+            $q->where('title','LIKE', "%{$search}%");
+        })->paginate(5);
         
-        return view('admin.customers.customer' , compact('customers'));
+        return view('admin.customers.customer' , compact('customers','Stories'));
 
     }
 }
