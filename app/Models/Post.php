@@ -13,6 +13,15 @@ class Post extends Model
 
     public $fillable = ['slug','status','image1','image2','image3','profImg'];
 
+    public function getKeywordsListAttribute()
+    {
+        if(!$this->keywords){
+            return[];
+        }
+        
+        return array_filter(array_map('trim',explode(',',$this->keywords)));
+    }
+
      
     public function resolveRouteBinding($value, $field = null)
     {

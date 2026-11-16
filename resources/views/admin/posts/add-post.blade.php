@@ -43,7 +43,7 @@
         <div class="tab-pane fade show active" id="en">
 
     <div class="col-md-4 mb-3">
-    <label for="en_title"  class="form-label d-block ">title*</label>
+    <label for="en_title"  class="form-label d-block ">title(en)</label>
     <input type="text" class="form-control" id="en_title" name="en[title]" value="{{ old('en.title') }}">
     @error('en.title')
        <div class="alert alert-danger mt-1">{{ $message }}</div>
@@ -148,9 +148,16 @@
     @enderror
   </div>
   <div class="col-md-4 mb-3">
-    <label for="en_aouther"  class="form-label d-block ">About the author</label>
+    <label for="en_aouther"  class="form-label d-block ">Name of the author</label>
     <input type="text" class="form-control" id="en_aouther" name="en[aouther]" value="{{ old('en.aouther') }}">
     @error('en.aouther')
+       <div class="alert alert-danger mt-1">{{ $message }}</div>
+    @enderror
+  </div>
+  <div class="mb-3 col-8 mb-3">
+    <label for="en_about_aouther" class="form-label">about aouthor</label>
+    <textarea class="form-control" name="en[about_aouther]" placeholder="Enter description..." value="{{ old('en.about_aouther') }}"></textarea>
+    @error('en.about_aouther')
        <div class="alert alert-danger mt-1">{{ $message }}</div>
     @enderror
   </div>
@@ -236,7 +243,20 @@
        <div class="alert alert-danger mt-1">{{ $message }}</div>
     @enderror
   </div>
- 
+  <div class="col-md-4 mb-3">
+    <label for="nl_aouther"  class="form-label d-block ">Name of the author</label>
+    <input type="text" class="form-control" id="nl_aouther" name="nl[aouther]" value="{{ old('nl.aouther') }}">
+    @error('nl.aouther')
+       <div class="alert alert-danger mt-1">{{ $message }}</div>
+    @enderror
+  </div>
+ <div class="mb-3 col-8 mb-2">
+    <label for="nl_about_aouther" class="form-label">about aouther</label>
+    <textarea class="form-control" name="nl[about_aouther]" placeholder="Enter description..." value="{{ old('nl.about_aouther') }}"></textarea>
+    @error('nl.about_aouther')
+       <div class="alert alert-danger mt-1">{{ $message }}</div>
+    @enderror
+  </div>
 
         </div>
 

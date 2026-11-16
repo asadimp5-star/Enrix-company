@@ -38,6 +38,7 @@ return [
     'Ways we can work together' => 'Ways we can work together',
     'How a partnership works' => 'How a partnership works',
     'Partners & testimonial' => 'Partners & testimonial',
+    "Organisations I've worked with"=>"Organisations I've worked with",
     // end partner page
 
     'return' => 'Return',
@@ -48,6 +49,7 @@ return [
     'My approach' => 'My approach',
     'Credentials & results' => 'Credentials & results',
     'Case stories' => 'Case stories',
+    "Startups I've helped"=>"Startups I've helped",
     // end about page
 
     // start recourse page
@@ -55,7 +57,18 @@ return [
     'Read article' => 'Read article',
     'Article list' => 'Article list',
     'Grant overview guides' => 'Grant overview guides',
+    'Clear, practical explanations of startup funding in the Netherlands and the EU.'=>'Clear, practical explanations of startup funding in the Netherlands and the EU.',
     // end recourse page
+
+    // start article page
+    'Article header' => 'Article header',
+    'Key takeaways' => 'Key takeaways',
+    'Article text' => 'Article text',
+    'Sources & further reading' => 'Sources & further reading',
+    'About the author'=>'About the author',
+    'In short'=>'In short',
+    'Return to Article List'=>'Return to Article List',
+    // end article page
 
     // start contact page
     "Let's get in touch"=>"Let's get in touch",

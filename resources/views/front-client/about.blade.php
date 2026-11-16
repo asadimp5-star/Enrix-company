@@ -1,21 +1,26 @@
 @extends('front-client.layout.masterPage')
 
-@section('title',app()->getLocale() == 'en' ? 'Enrix Company about' : 'Enrix Company about')
+@section('title',app()->getLocale() == 'en' ? 'Enrix Company about' : 'Enrix Bedrijf Over')
 
 @section('Abou','activ')
 
 
 @section('content')
 
+
 <section data-dc-tpl="5" class="aboutHero">
-<div data-dc-tpl="6" class="aboutHeroImg"><img src="#" alt="Warm, professional photo of Mahsa"> </div>
+@foreach ($abouts as $about)
+<div data-dc-tpl="6" >
+    <img class="aboutHeroImg" src="{{ asset('storage/aboutImg/'.$about->image1) }}" alt="{{ $about->title }}">
+ </div>
 <div data-dc-tpl="7" class="aboutHeroDiv">
 <p data-dc-tpl="8" class="secName">{{ __('content.Introduction') }}</p>
-<h1 data-dc-tpl="9" class="aboutHeroTitle">Hi, I'm Mahsa</h1>
+<h1 data-dc-tpl="9" class="aboutHeroTitle">{!! nl2br(e($about->title)) !!}</h1>
 <hr class="bg">
-<p data-dc-tpl="10" class="aboutHeroDesc">Founder of Enrix. I help early-stage startups find and win the grants that fit their plans. [Adjust to your own words.]</p>
+<p data-dc-tpl="10" class="aboutHeroDesc">{!! nl2br(e($about->title)) !!}</p>
 <a data-dc-tpl="11" href="#getTouch" class="introCall">{{ __('content.Book a free intro call') }}</a>
 </div>
+@endforeach
 </section>
 
 <section data-dc-tpl="12" class="aboutStory">
@@ -69,33 +74,26 @@
 </div>
 </section>
 
+
+
+
+
 <section data-dc-tpl="48" class="aboutCase">
 <p data-dc-tpl="49" class="secName">{{ __('content.Case stories') }}</p>
-<h2 data-dc-tpl="50" class="aboutStoryDivTitle">Startups I've helped</h2>
-<p data-dc-tpl="51" class="aboutCaseP">Shared with each client's permission.</p>
+<h2 data-dc-tpl="50" class="aboutStoryDivTitle">{{ __('content.Startups I\'ve helped') }}</h2>
 <div data-dc-tpl="52" class="aboutCaseDive">
+@foreach ($story as $stor)
+@if ($stor->status ==1)
 <div data-dc-tpl="53" class="aboutCaseDiveItem">
-<h3 data-dc-tpl="55" class="aboutCaseDiveItemTitle1">[Client name or "an early-stage startup in X"]</h3>
-<p data-dc-tpl="56" class="aboutApproachDivDesc">
-<strong data-dc-tpl="57" style="color: rgb(19, 35, 58);">Challenge:</strong> [one sentence]</p>
-<p data-dc-tpl="58" class="aboutApproachDivDesc">
-<strong data-dc-tpl="59" style="color: rgb(19, 35, 58);">What we did:</strong> [one sentence]</p>
-<p data-dc-tpl="60" class="aboutApproachDivDesc">
-<strong data-dc-tpl="61" style="color: rgb(19, 35, 58);">Result:</strong> [one sentence]</p>
-<p data-dc-tpl="62" class="aboutApproachDivp2">"[Short client quote]"</p>
+<h3 data-dc-tpl="55" class="aboutCaseDiveItemTitle1">{!! nl2br(e($stor->title)) !!}</h3>
+<p data-dc-tpl="56" class="aboutApproachDivDesc">{!! nl2br(e($stor->desc)) !!}</p>
 </div>
-<div data-dc-tpl="63" class="aboutCaseDiveItem">
-<h3 data-dc-tpl="65" class="aboutCaseDiveItemTitle1">[Client name or "an early-stage startup in X"]</h3>
-<p data-dc-tpl="66" class="aboutApproachDivDesc">
-<strong data-dc-tpl="67" style="color: rgb(19, 35, 58);">Challenge:</strong> [one sentence]</p>
-<p data-dc-tpl="68" class="aboutApproachDivDesc">
-<strong data-dc-tpl="69" style="color: rgb(19, 35, 58);">What we did:</strong> [one sentence]</p>
-<p data-dc-tpl="70" class="aboutApproachDivDesc">
-<strong data-dc-tpl="71" style="color: rgb(19, 35, 58);">Result:</strong> [one sentence]</p>
-<p data-dc-tpl="72" class="aboutApproachDivp2">"[Short client quote]"</p>
+@endif 
+@endforeach
 </div>
-</div>
+<div class="col-3 pe-5">{{ $story->links() }}</div>
 </section>
+
 
 
 

@@ -1,25 +1,29 @@
 @extends('front-client.layout.masterPage')
 
-@section('title',app()->getLocale() == 'en' ? 'Enrix Company Home' : 'Enrix Company Home')
+@section('title',app()->getLocale() == 'en' ? 'Enrix Company Home' : 'Enrix Bedrijf thuis')
 
 @section('HOM','activ')
 
 
 @section('content')
 
+
+
 <section data-dc-tpl="18" class="hero ">
+@foreach ($home as $item)   
 <div data-dc-tpl="19" class="heroDiv">
-<h1 data-dc-tpl="21" class="heroH1">Grant funding for early-stage startups, found and written with care</h1>
+<h1 data-dc-tpl="21" class="heroH1">{!! nl2br(e($item->title)) !!}</h1>
 <hr class="bg">
-<p data-dc-tpl="22" class="heroP">Grant writing and strategic advisory for startups in the Netherlands — from MIT and WBSO to SVOM, EIC and Eurostars.</p>
+<p data-dc-tpl="22" class="heroP">{!! nl2br(e($item->desc)) !!}</p>
 <div data-dc-tpl="23" class="heroDiv1">
 <a data-dc-tpl="24" href="#getTouch" class="introCall">{{ __('content.Book an intro call') }}</a>
 <a data-dc-tpl="25" href="{{ route('services') }}" class="heroA1">{{ __('content.See services') }}</a>
 </div>
 </div>
-<div data-dc-tpl="26" class="heroImg">
- <img src="#" alt="mahsa">
+<div data-dc-tpl="26" >
+ <img class="heroImg" src="{{ asset('storage/firstImg/'.$item->image1) }}" alt="{{$item->title}}">
 </div>
+@endforeach
 </section>
 
 
@@ -94,6 +98,7 @@
 </div>
 </div>
 </section>
+
 
 @endsection
 

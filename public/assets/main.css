@@ -15,7 +15,7 @@ body a{
 }
 
 header{
-  background: #2c5a46;
+  background: #265a43;
   border-bottom: 1px solid rgb(226, 230, 234);
 }
 .headerdiv{
@@ -112,7 +112,7 @@ footer a{
   display: flex; flex-wrap: wrap; gap: 48px; align-items: center;
 }
 .heroDiv{
-  flex: 1 1 480px; min-width: 0px;
+  flex: 1 1 300px; min-width: 0px;
 }
 .heroH1{
   margin: 0px 0px 20px; font-size: 48px; line-height: 1.15; font-weight: 700;
@@ -128,7 +128,7 @@ footer a{
   text-decoration: none; padding: 13px 24px; border-radius: 8px; font-weight: 600;
 }
 .heroImg{
-  flex: 1 1 320px; height: 380px; border: 2px dashed rgb(160, 170, 182); border-radius: 16px; display: flex; 
+  flex: 1 1 320px;width: 95%; height: 380px; border: 2px dashed rgb(160, 170, 182); border-radius: 16px; display: flex; 
   align-items: center; justify-content: center; color: rgb(74, 85, 104); font-weight: 600; background: rgb(255, 255, 255);
 }
 .results{
@@ -270,7 +270,7 @@ footer a{
   display: flex; flex-wrap: wrap; gap: 48px; align-items: center;
 }
 .partnerHeroSec{
-  flex: 1 1 480px; min-width: 0px;
+  flex: 1 1 380px; min-width: 0px;
 }
 .partnerHeroTitle{
   margin: 0px 0px 16px; font-size: 44px; line-height: 1.15;
@@ -279,7 +279,7 @@ footer a{
   margin: 0px 0px 28px; font-size: 19px; color: rgb(74, 85, 104);
 }
 .partnerHeroImg{
-  flex: 1 1 320px; height: 320px; 
+  flex: 1 1 300px; height: 320px; width: 95%;
   border: 2px dashed rgb(160, 170, 182); border-radius: 20px; display: flex; align-items: center; justify-content: center; 
   color: rgb(74, 85, 104); font-weight: 600; background: rgb(255, 255, 255); text-align: center; padding: 24px; box-sizing: border-box;
 }
@@ -357,10 +357,10 @@ footer a{
   max-width: 1120px; margin: 0px auto; padding: 72px 24px 64px; display: flex; flex-wrap: wrap; gap: 48px; align-items: center;
 }
 .aboutHeroImg{
-  flex: 1 1 320px; height: 420px; border: 2px dashed rgb(160, 170, 182); border-radius: 20px; display: flex; align-items: center; justify-content: center; color: rgb(74, 85, 104); font-weight: 600; background: rgb(255, 255, 255);
+  flex: 1 1 280px; height: 420px;width: 95%; border: 2px dashed rgb(160, 170, 182); border-radius: 20px; display: flex; align-items: center; justify-content: center; color: rgb(74, 85, 104); font-weight: 600; background: rgb(255, 255, 255);
 }
 .aboutHeroDiv{
-  flex: 1 1 460px; min-width: 0px;
+  flex: 1 1 390px; min-width: 0px;
 }
 .aboutHeroTitle{
   margin: 0px 0px 16px; font-size: 44px; line-height: 1.15;
@@ -450,11 +450,11 @@ footer a{
   border-radius: 20px; overflow: hidden; display: flex; flex-wrap: wrap;
 }
 .resorceFeatureDivImg{
-  flex: 1 1 420px; min-height: 300px; background: rgb(226, 230, 234); 
+  flex: 1 1 200px; min-height: 100%;width: 100%; background: rgb(226, 230, 234); 
   display: flex; align-items: center; justify-content: center; color: rgb(74, 85, 104); font-weight: 600;
 }
 .resorceFeatureDivItem{
-  flex: 1 1 420px; min-width: 0px; padding: 40px; display: flex; 
+  flex: 1 1 200px; min-width: 0px; padding: 40px; display: flex; 
   flex-direction: column; gap: 12px; justify-content: center;
 }
 .resorceFeatureDivItemDate{
@@ -481,12 +481,13 @@ footer a{
   display: flex; flex-wrap: wrap; gap: 24px;
 }
 .resorceListArtOne{
-  flex: 1 1 300px; background: rgb(255, 255, 255); border: 1px solid rgb(226, 230, 234); 
-  border-radius: 16px; overflow: hidden; display: flex; flex-direction: column;
+   background: rgb(255, 255, 255); 
+   border-radius: 16px
 }
 .resorceListArtImg{
-  height: 160px; background: rgb(226, 230, 234); display: flex; align-items: center;
-  justify-content: center; color: rgb(74, 85, 104); font-size: 14px;
+  height: 160px;width: 100%; background: rgb(226, 230, 234); display: flex; align-items: center;border-radius: 16px;
+  justify-content: center; color: rgb(74, 85, 104); font-size: 14px;display: flex; flex-direction: row;
+  overflow: hidden; flex: 1 1 300px;border: 1px solid rgb(226, 230, 234); 
 }
 .resorceListArtDiv{
   padding: 24px; display: flex; flex-direction: column; gap: 8px;
@@ -629,7 +630,7 @@ footer a{
   font-weight: 600; color: rgb(19, 35, 58);
 }
 .SarticleTitleImag{
-  height: 380px; background: rgb(226, 230, 234); border-radius: 16px; display: flex; 
+  height: 380px;width: 100%; background: rgb(226, 230, 234); border-radius: 16px; display: flex; 
   align-items: center; justify-content: center; color: rgb(74, 85, 104); 
   font-weight: 600; margin-bottom: 40px;
 }
@@ -646,7 +647,7 @@ footer a{
   margin: 36px 0px 12px; font-size: 28px;
 }
 .SarticleDescImg{
-  height: 260px; background: rgb(226, 230, 234); border-radius: 12px; display: flex;
+  height: 260px;width: 100%; background: rgb(226, 230, 234); border-radius: 12px; display: flex;
   align-items: center; justify-content: center; color: rgb(74, 85, 104); font-size: 14px; 
   margin: 28px 0px 8px;
 }

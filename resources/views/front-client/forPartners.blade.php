@@ -1,23 +1,27 @@
 @extends('front-client.layout.masterPage')
 
-@section('title',app()->getLocale() == 'en' ? 'Enrix Company for partners' : 'Enrix Company for partners')
+@section('title',app()->getLocale() == 'en' ? 'Enrix Company for partners' : 'Enrix Bedrijf Voor partners')
 
 @section('partn','activ')
 
 
 @section('content')
 
+    
+    
     <section data-dc-tpl="5" class="partnerHero">
+    @foreach ($partns as $partn)
 <div data-dc-tpl="6" class="partnerHeroSec">
 <p data-dc-tpl="7" class="secName">{{ __('content.Introduction') }}</p>
-<h1 data-dc-tpl="8" class="partnerHeroTitle">For accelerators and startup hubs</h1>
+<h1 data-dc-tpl="8" class="partnerHeroTitle">{!! nl2br(e($partn->title)) !!}</h1>
 <hr class="bg">
-<p data-dc-tpl="9" class="partnerHeroDesc">Give your startups practical, up-to-date knowledge about Dutch and EU grants, and a trusted expert to turn to. [Adjust to your own words.]</p>
+<p data-dc-tpl="9" class="partnerHeroDesc">{!! nl2br(e($partn->desc)) !!}</p>
 <a data-dc-tpl="10" href="#getTouch" class="introCall">{{ __('content.Let\'s talk about a partnership') }}</a>
 </div>
-<div data-dc-tpl="11" class="partnerHeroImg">
-    <img src="#" alt="photo">
+<div data-dc-tpl="11" >
+    <img class="partnerHeroImg" src="{{ asset('storage/partnerImg/'.$partn->image1 ) }}" alt="photo">
 </div>
+    @endforeach
     </section>
 
     <section data-dc-tpl="12" class="enrixPart">
@@ -124,24 +128,31 @@
 </div>
 </div>
     </section>
+    
 
+    
+    
+    
     <section data-dc-tpl="56" class="partnerTest">
 <p data-dc-tpl="57" class="secName">{{ __('content.Partners & testimonial') }}</p>
-<h2 data-dc-tpl="58" class="partnerWorkTitle">Organisations I've worked with</h2>
-
+<h2 data-dc-tpl="58" class="partnerWorkTitle">{{ __('content.Organisations I\'ve worked with') }}</h2>
+@foreach ($customrs as $customr)
+@if ($customr->status ==1)
 <div data-dc-tpl="27" class="resorceListArt">
-<div data-dc-tpl="29" class="resorceListArtOne">
-<div data-dc-tpl="30" class="resorceListArtImg">
-    <img src="#" alt="[Image]">
-    </div>
+<div data-dc-tpl="29">
+<div data-dc-tpl="30" >
+    <img class="resorceListArtImg" src="{{ asset('storage/customerImg/'. $customr->image1) }}" alt="{{ $customr->title }}">
+</div>
+</div>
 <div data-dc-tpl="31" class="resorceListArtDiv">
-<h3 data-dc-tpl="33" class="resorceListArtDivTitle">[title]</h3>
-<p data-dc-tpl="34" class="resorceListArtDivSum">[One-line summary]</p>
+<h3 data-dc-tpl="33" class="resorceListArtDivTitle">{!! nl2br(e($customr->title)) !!}</h3>
+<p data-dc-tpl="34" class="resorceListArtDivSum">{!! nl2br(e($customr->desc)) !!}</p>
 
 </div>
 </div>
-</div>
-
+@endif
+@endforeach
     </section>
 
+    
 @endsection

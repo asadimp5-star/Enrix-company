@@ -1,17 +1,20 @@
 @extends('front-client.layout.masterPage')
 
-@section('title',app()->getLocale() == 'en' ? 'Enrix Company services' : 'Enrix Company services')
+@section('title',app()->getLocale() == 'en' ? 'Enrix Company services' : 'Enrix Bedrijf Diensten')
 
 @section('Servi','activ')
 
 
 @section('content')
 
+
 <section data-dc-tpl="5" class="servHero">
+@foreach ($service as $item)
 <p data-dc-tpl="8" class="secName">{{ __('content.Service intro') }}</p>
-<h1 data-dc-tpl="9" class="servTitle">Grant writing for early-stage startups</h1>
-<p data-dc-tpl="10" class="servDesc">[One or two sentences: what this service does for the startup, in your own words.]</p>
+<h1 data-dc-tpl="9" class="servTitle">{!! nl2br(e($item->title)) !!}</h1>
+<p data-dc-tpl="10" class="servDesc">{!! nl2br(e($item->desc)) !!}</p>
 <a data-dc-tpl="11" href="#getTouch" class="introCall">{{ __('content.Book an intro call') }}</a>
+@endforeach
 </section>
 
 <section data-dc-tpl="12" class="servFor">
@@ -84,18 +87,24 @@
 </div>
 </section>
 
+
+
+
 <section data-dc-tpl="60" class="servFaq" id="FAQs">
 <p data-dc-tpl="61" class="secName">FAQ</p>
 <div data-dc-tpl="62" class="servFaqDiv">
-<div data-dc-tpl="63" class="servFaqSec">
-<h3 data-dc-tpl="64" class="servFaqQue">[Question about this service]</h3>
-<p data-dc-tpl="65" class="servFaqAns">[Your answer]</p>
-</div>
+@foreach ($faqs as $faq)
+@if ($faq->status == 1)  
 <div data-dc-tpl="66" class="servFaqSec">
-<h3 data-dc-tpl="67" class="servFaqQue">[Question about this service]</h3>
-<p data-dc-tpl="68" class="servFaqAns">[Your answer]</p>
+
+<h3 data-dc-tpl="67" class="servFaqQue">{!! nl2br(e($faq->question)) !!}</h3>
+<p data-dc-tpl="68" class="servFaqAns">{!! nl2br(e($faq->answer)) !!}</p>
+
 </div>
+@endif
 </div>
 </section>
+@endforeach
+<div class="col-3 pe-5">{{ $faqs->links() }}</div>
 
 @endsection

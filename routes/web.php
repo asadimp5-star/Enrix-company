@@ -143,7 +143,7 @@ Route::get('/for-partners',[HomeController::class,'partners'])->name('partners')
 Route::get('/about',[HomeController::class,'about'])->name('about');
 Route::get('/resorces',[HomeController::class,'resorces'])->name('resorces');
 Route::get('/contact',[HomeController::class,'contact'])->name('contact');
-Route::get('/article',[HomeController::class,'article'])->name('article');
+Route::get('/article/{slug}',[HomeController::class,'article'])->name('article');
 });
 
 Route::middleware([

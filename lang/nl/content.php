@@ -38,6 +38,7 @@ return [
     'Ways we can work together' => 'Manieren waarop we kunnen samenwerken',
     'How a partnership works' => 'Hoe een partnerschap werkt',
     'Partners & testimonial' => 'Partners en getuigenissen',
+    "Organisations I've worked with"=>"Organisaties waarmee ik heb samengewerkt",
     // end partner page
 
     'return' => 'opbrengst',
@@ -48,6 +49,7 @@ return [
     'My approach' => 'Mijn aanpak',
     'Credentials & results' => 'Referenties en resultaten',
     'Case stories' => 'Casestudies',
+    "Startups I've helped"=>"Startups die ik heb geholpen",
     // end about page
 
     // start recourse page
@@ -55,7 +57,18 @@ return [
     'Read article' => 'Lees het artikel',
     'Article list' => 'Artikelenlijst',
     'Grant overview guides' => 'Overzichtsgidsen voor subsidies',
+    'Clear, practical explanations of startup funding in the Netherlands and the EU.'=>'Duidelijke en praktische uitleg over startkapitaal in Nederland en de EU.',
     // end recourse page
+
+    // start article page
+    'Article header' => 'Artikelkop',
+    'Key takeaways' => 'Belangrijkste conclusies',
+    'Article text' => 'Artikeltekst',
+    'Sources & further reading' => 'Bronnen en verdere literatuur',
+    'About the author'=>'Over de auteur',
+    'In short'=>'Kortom',
+    'Return to Article List'=>'Terug naar de artikellijst',
+    // end article page
 
     // start contact page
     "Let's get in touch"=>"Laten we contact opnemen",

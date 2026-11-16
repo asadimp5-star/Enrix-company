@@ -25,6 +25,7 @@ return new class extends Migration
             $table->string('sourceTitle')->nullable();
             $table->string('sourceDesc')->nullable();
             $table->string('aouther')->nullable();
+            $table->text('about_aouther')->nullable();
             $table->unique(['post_id','locale']);
         });
     }

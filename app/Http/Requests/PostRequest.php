@@ -46,6 +46,8 @@ class PostRequest extends FormRequest
             'en.sourceTitle'=>'nullable|string|max:100',
             'en.sourceDesc'=>'nullable|string|max:200',
             'en.aouther'=>'nullable|string|max:100',
+            'en.about_aouther'=>'nullable|string|max:2000',
+
             
             'nl' => 'nullable|array',
             
@@ -59,6 +61,8 @@ class PostRequest extends FormRequest
             'nl.sourceTitle'=>'nullable|string|max:100',
             'nl.sourceDesc'=>'nullable|string|max:200',
             'nl.aouther'=>'nullable|string|max:100',
+            'nl.about_aouther'=>'nullable|string|max:2000',
+
                        
         ];
     }

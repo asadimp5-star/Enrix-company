@@ -3,7 +3,7 @@
 
 @if (!request()->Is('*/contact*'))
 
-<section data-dc-tpl="66" class="getTouch" id="getTouch">
+<section data-dc-tpl="66" class="getTouch mt-2" id="getTouch">
 <div data-dc-tpl="67" class="getTouchdiv">
 <div data-dc-tpl="68" class="getTouchdiv1">
 <p data-dc-tpl="69" class="getInTouchP">{{ __('content.Call to action') }}</p>

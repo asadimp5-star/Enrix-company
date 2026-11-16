@@ -40,7 +40,7 @@
         <div class="tab-pane fade show active" id="en">
 
     <div class="col-md-4 mb-3">
-    <label for="en_title"  class="form-label d-block ">title*</label>
+    <label for="en_title"  class="form-label d-block ">title(en)</label>
     <input type="text" class="form-control" id="en_title" name="en[title]" value="{{ $post->translate('en')?->title??'' }}">
     @error('en.title')
        <div class="alert alert-danger mt-1">{{ $message }}</div>
@@ -237,9 +237,17 @@
 
   
   <div class="col-md-4 mb-3">
-    <label for="en_aouther"  class="form-label d-block ">About the author</label>
+    <label for="en_aouther"  class="form-label d-block ">Name of the author</label>
     <input type="text" class="form-control" id="en_aouther" name="en[aouther]" value="{{ $post->translate('en')?->aouther??'' }}">
     @error('en.aouther')
+       <div class="alert alert-danger mt-1">{{ $message }}</div>
+    @enderror
+  </div>
+
+  <div class="mb-3 col-8 mb-3">
+    <label for="en_about_aouther" class="form-label">about aouther</label>
+    <textarea class="form-control" name="en[about_aouther]">{{ $post->translate('en')?->about_aouther??'' }}</textarea>
+    @error('en.about_aouther')
        <div class="alert alert-danger mt-1">{{ $message }}</div>
     @enderror
   </div>
@@ -322,6 +330,22 @@
     <label for="nl_sourceDesc"  class="form-label d-block ">further reading</label>
     <input type="text" class="form-control" id="nl_sourceDesc" name="nl[sourceDesc]" value="{{ $post->translate('nl')?->sourceDesc??'' }}">
     @error('nl.sourceDesc')
+       <div class="alert alert-danger mt-1">{{ $message }}</div>
+    @enderror
+  </div>
+
+  <div class="col-md-4 mb-3">
+    <label for="nl_aouther"  class="form-label d-block ">Name of the author</label>
+    <input type="text" class="form-control" id="nl_aouther" name="nl[aouther]" value="{{ $post->translate('nl')?->aouther??'' }}">
+    @error('nl.aouther')
+       <div class="alert alert-danger mt-1">{{ $message }}</div>
+    @enderror
+  </div>
+
+  <div class="mb-3 col-8 mb-3">
+    <label for="nl_about_aouther" class="form-label">about aouther</label>
+    <textarea class="form-control" name="nl[about_aouther]">{{ $post->translate('nl')?->about_aouther??'' }}</textarea>
+    @error('nl.about_aouther')
        <div class="alert alert-danger mt-1">{{ $message }}</div>
     @enderror
   </div>

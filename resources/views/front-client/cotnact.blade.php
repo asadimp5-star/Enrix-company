@@ -1,6 +1,6 @@
 @extends('front-client.layout.masterPage')
 
-@section('title',app()->getLocale() == 'en' ? 'Enrix Company contact' : 'Enrix Company contact')
+@section('title',app()->getLocale() == 'en' ? 'Enrix Company contact' : 'Enrix Bedrijf contact')
 
 @section('Conta','activ')
 
@@ -16,10 +16,10 @@
 <div data-dc-tpl="10" class="contactDiv1">
 <p data-dc-tpl="11" class="secName">{{ __('content.Contact form') }}</p>
 <h2 data-dc-tpl="12" class="contactFormTitle">{{ __('content.Send me a message') }}</h2>
-@if (session('successe'))
+@if (session('success'))
       <section class="container-fluid d-flex justify-content-center">
         <div class="alert alert-success col-10 text-center m-1" role="alert">
-         <h6 class="yekan">{{session('successe')}}</h6>
+         <h6 class="yekan">{{session('success')}}</h6>
           
         </div>
       </section>
