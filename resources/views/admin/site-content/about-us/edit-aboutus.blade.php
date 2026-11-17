@@ -143,17 +143,19 @@
     <input type="text" class="form-control" name="blocks[2][en][lable]" value="{{ $block2->translate('en')->lable ?? ''}}">
     </div>
     <div class="col-md-4 mb-3">
-    <label class="form-label d-block ">steps title</label>
+    <label class="form-label d-block ">title</label>
 
     <input type="text" class="form-control"  name="blocks[2][en][items][]" value="{{ $block2?->translate('en')?->items[0] ?? '' }}">
     <input type="text" class="form-control"  name="blocks[2][en][items][]" value="{{ $block2?->translate('en')?->items[1] ?? '' }}">
-    <br>
     <input type="text" class="form-control"  name="blocks[2][en][items][]" value="{{ $block2?->translate('en')?->items[2] ?? '' }}">
-    <input type="text" class="form-control"  name="blocks[2][en][items][]" value="{{ $block2?->translate('en')?->items[3] ?? '' }}">
     <br>
+    <input type="text" class="form-control"  name="blocks[2][en][items][]" value="{{ $block2?->translate('en')?->items[3] ?? '' }}">
     <input type="text" class="form-control"  name="blocks[2][en][items][]" value="{{ $block2?->translate('en')?->items[4] ?? '' }}">
     <input type="text" class="form-control"  name="blocks[2][en][items][]" value="{{ $block2?->translate('en')?->items[5] ?? '' }}">
     <br>
+    <input type="text" class="form-control"  name="blocks[2][en][items][]" value="{{ $block2?->translate('en')?->items[6] ?? '' }}">
+    <input type="text" class="form-control"  name="blocks[2][en][items][]" value="{{ $block2?->translate('en')?->items[7] ?? '' }}">
+    <input type="text" class="form-control"  name="blocks[2][en][items][]" value="{{ $block2?->translate('en')?->items[8] ?? '' }}">
     
     </div>
   </div>  
@@ -225,20 +227,20 @@
     <input type="text" class="form-control" name="blocks[2][nl][lable]" value="{{ $block2->translate('nl')->lable ?? ''}}">
     </div>
     <div class="col-md-4 mb-3">
-    <label class="form-label d-block ">steps title</label>
+    <label class="form-label d-block ">title</label>
 
     <input type="text" class="form-control"  name="blocks[2][nl][items][]" value="{{ $block2?->translate('nl')?->items[0] ?? '' }}">
     <input type="text" class="form-control"  name="blocks[2][nl][items][]" value="{{ $block2?->translate('nl')?->items[1] ?? '' }}">
-    <br>
     <input type="text" class="form-control"  name="blocks[2][nl][items][]" value="{{ $block2?->translate('nl')?->items[2] ?? '' }}">
-    <input type="text" class="form-control"  name="blocks[2][nl][items][]" value="{{ $block2?->translate('nl')?->items[3] ?? '' }}">
     <br>
+    <input type="text" class="form-control"  name="blocks[2][nl][items][]" value="{{ $block2?->translate('nl')?->items[3] ?? '' }}">
     <input type="text" class="form-control"  name="blocks[2][nl][items][]" value="{{ $block2?->translate('nl')?->items[4] ?? '' }}">
     <input type="text" class="form-control"  name="blocks[2][nl][items][]" value="{{ $block2?->translate('nl')?->items[5] ?? '' }}">
     <br>
     <input type="text" class="form-control"  name="blocks[2][nl][items][]" value="{{ $block2?->translate('nl')?->items[6] ?? '' }}">
     <input type="text" class="form-control"  name="blocks[2][nl][items][]" value="{{ $block2?->translate('nl')?->items[7] ?? '' }}">
-    
+    <input type="text" class="form-control"  name="blocks[2][nl][items][]" value="{{ $block2?->translate('nl')?->items[8] ?? '' }}">
+    <br>
     </div>
     </div>
       

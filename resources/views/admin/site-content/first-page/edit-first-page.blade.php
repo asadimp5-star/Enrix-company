@@ -155,7 +155,9 @@
     <input type="text" class="form-control"  name="blocks[2][en][items][]" value="{{ $block2?->translate('en')?->items[4] ?? '' }}">
     <input type="text" class="form-control"  name="blocks[2][en][items][]" value="{{ $block2?->translate('en')?->items[5] ?? '' }}">
     <br>
-    
+    <input type="text" class="form-control"  name="blocks[2][en][items][]" value="{{ $block2?->translate('en')?->items[6] ?? '' }}">
+    <input type="text" class="form-control"  name="blocks[2][en][items][]" value="{{ $block2?->translate('en')?->items[7] ?? '' }}">
+    <br>
     </div>
   </div>  
     
@@ -245,6 +247,9 @@
     <br>
     <input type="text" class="form-control"  name="blocks[2][nl][items][]" value="{{ $block2?->translate('nl')?->items[4] ?? '' }}">
     <input type="text" class="form-control"  name="blocks[2][nl][items][]" value="{{ $block2?->translate('nl')?->items[5] ?? '' }}">
+    <br>
+    <input type="text" class="form-control"  name="blocks[2][nl][items][]" value="{{ $block2?->translate('nl')?->items[6] ?? '' }}">
+    <input type="text" class="form-control"  name="blocks[2][nl][items][]" value="{{ $block2?->translate('nl')?->items[7] ?? '' }}">
     <br>
     
     </div>

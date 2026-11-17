@@ -26,27 +26,28 @@
 <section data-dc-tpl="12" class="aboutStory">
     <div data-dc-tpl="13" class="aboutStoryDiv">
 <p data-dc-tpl="14" class="secName">{{ __('content.My story') }}</p>
-<h2 data-dc-tpl="15" class="aboutStoryDivTitle">Why I started Enrix</h2>
-<p data-dc-tpl="16" class="aboutStoryDivItem"><span class="text-danger">✓</span>[Paragraph 1: your background and how you came to work with startups and grants.]</p>
-<p data-dc-tpl="17" class="aboutStoryDivItem"><span class="text-danger">✓</span>[Paragraph 2: what you noticed startups struggle with when it comes to funding.]</p>
-<p data-dc-tpl="18" class="aboutStoryDivItem"><span class="text-danger">✓</span>[Paragraph 3: why you founded Enrix in 2026 and what you want to achieve for your clients.]</p>
+<h2 data-dc-tpl="15" class="aboutStoryDivTitle">{{ $checkListBlock->lable }}</h2>
+<p data-dc-tpl="16" class="aboutStoryDivItem"><span class="text-danger">✓</span>{{ $checkListBlock->items[0] ?? '' }}</p>
+<p data-dc-tpl="17" class="aboutStoryDivItem"><span class="text-danger">✓</span>{{ $checkListBlock->items[1] ?? '' }}</p>
+<p data-dc-tpl="18" class="aboutStoryDivItem"><span class="text-danger">✓</span>{{ $checkListBlock->items[2] ?? '' }}</p>
+<p data-dc-tpl="18" class="aboutStoryDivItem"><span class="text-danger">✓</span>{{ $checkListBlock->items[3] ?? '' }}</p>
 </div>
 </section>
 
 <section data-dc-tpl="19" class="aboutApproach">
 <p data-dc-tpl="20" class="secName">{{ __('content.My approach') }}</p>
-<h2 data-dc-tpl="21" class="aboutStoryDivTitle">How I work with startups</h2>
+<h2 data-dc-tpl="21" class="aboutStoryDivTitle">{{ $checkList1Block->lable }}</h2>
 <div data-dc-tpl="22" style="display: flex; flex-wrap: wrap; gap: 24px;"><div data-dc-tpl="23" class="aboutApproachDiv">
-<h3 data-dc-tpl="24" class="aboutApproachDivTitle">Relationship first</h3>
-<p data-dc-tpl="25" class="aboutApproachDivDesc">I take time to understand your startup before suggesting any grant. [Adjust]</p>
+<h3 data-dc-tpl="24" class="aboutApproachDivTitle">{{ $checkList1Block->items[0] ?? '' }}</h3>
+<p data-dc-tpl="25" class="aboutApproachDivDesc">{{ $checkList1Block->items[1] ?? '' }}</p>
 </div>
 <div data-dc-tpl="26" class="aboutApproachDiv">
-<h3 data-dc-tpl="27" class="aboutApproachDivTitle">Honest advice</h3>
-<p data-dc-tpl="28" class="aboutApproachDivDesc">If a grant isn't a good fit, I'll tell you clearly, so you don't waste time. [Adjust]</p>
+<h3 data-dc-tpl="27" class="aboutApproachDivTitle">{{ $checkList1Block->items[2] ?? '' }}</h3>
+<p data-dc-tpl="28" class="aboutApproachDivDesc">{{ $checkList1Block->items[3] ?? '' }}</p>
 </div>
 <div data-dc-tpl="29" class="aboutApproachDiv">
-<h3 data-dc-tpl="30" class="aboutApproachDivTitle">Thorough search</h3>
-<p data-dc-tpl="31" class="aboutApproachDivDesc">I check national, regional and EU funding for every project. [Adjust]</p>
+<h3 data-dc-tpl="30" class="aboutApproachDivTitle">{{ $checkList1Block->items[4] ?? '' }}</h3>
+<p data-dc-tpl="31" class="aboutApproachDivDesc">{{ $checkList1Block->items[5] ?? '' }}</p>
 </div>
 </div>
 </section>
@@ -54,21 +55,22 @@
 <section data-dc-tpl="32" class="howCan">
 <div data-dc-tpl="33" class="aboutCreadit">
 <p data-dc-tpl="34" class="secName">{{ __('content.Credentials & results') }}</p>
-<h2 data-dc-tpl="35" class="aboutStoryDivTitle">Background</h2>
+<h2 data-dc-tpl="35" class="aboutStoryDivTitle">{{ $stepBlock->lable }}</h2>
 <div data-dc-tpl="36" class="aboutCreaditDiv">
 <div data-dc-tpl="37" class="aboutCreaditDivItem">
-<h3 data-dc-tpl="38" class="aboutCreaditDivTitle">Education</h3>
-<p data-dc-tpl="39" class="aboutCreaditDivDesc">MSc Entrepreneurship — University of Tehran</p>
-<p data-dc-tpl="40" class="aboutCreaditDivDesc">MSc International Management — Vrije Universiteit Amsterdam</p>
+<h3 data-dc-tpl="38" class="aboutCreaditDivTitle">{{ $stepBlock->items[0] ?? '' }}</h3>
+<p data-dc-tpl="39" class="aboutCreaditDivDesc">{{ $stepBlock->items[1] ?? '' }}</p>
+<p data-dc-tpl="40" class="aboutCreaditDivDesc">{{ $stepBlock->items[2] ?? '' }}</p>
 </div>
 <div data-dc-tpl="41" class="aboutCreaditDivItem">
-<h3 data-dc-tpl="42" class="aboutCreaditDivTitle">Successful applications</h3>
-<p data-dc-tpl="43" class="aboutCreaditDivDesc">MIT Haalbaarheid</p>
-<p data-dc-tpl="44" class="aboutCreaditDivDesc">SVOM</p>
+<h3 data-dc-tpl="42" class="aboutCreaditDivTitle">{{ $stepBlock->items[3] ?? '' }}</h3>
+<p data-dc-tpl="43" class="aboutCreaditDivDesc">{{ $stepBlock->items[4] ?? '' }}</p>
+<p data-dc-tpl="44" class="aboutCreaditDivDesc">{{ $stepBlock->items[5] ?? '' }}</p>
 </div>
 <div data-dc-tpl="45" class="aboutCreaditDivItem">
-<h3 data-dc-tpl="46" class="aboutCreaditDivTitle">In the startup ecosystem</h3>
-<p data-dc-tpl="47" class="aboutCreaditDivDesc">[Communities, networks or events you're active in]</p>
+<h3 data-dc-tpl="46" class="aboutCreaditDivTitle">{{ $stepBlock->items[6] ?? '' }}</h3>
+<p data-dc-tpl="44" class="aboutCreaditDivDesc">{{ $stepBlock->items[7] ?? '' }}</p>
+<p data-dc-tpl="47" class="aboutCreaditDivDesc">{{ $stepBlock->items[8] ?? '' }}</p>
 </div>
 </div>
 </div>

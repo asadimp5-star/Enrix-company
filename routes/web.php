@@ -8,6 +8,8 @@ use App\Http\Controllers\Client\HomeController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\FirstPageController;
+use App\Http\Controllers\Grant_guideController;
+use App\Http\Controllers\GrantController;
 use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\StorieController;
@@ -88,6 +90,16 @@ Route::prefix('admin')->group(function(){
             Route::delete('/story-delete/{id}',[StorieController::class,'destroy'])->name('admin.storie.delet');
             Route::get('/story-edit/{id}',[StorieController::class,'edit'])->name('admin.storie.edite');
             Route::put('/story-Update/{id}',[StorieController::class,'update'])->name('admin.storie.update');
+
+        });
+
+        Route::prefix('/grant-guide')->group(function(){
+            Route::get('/grant-add',[GrantController::class,'create'])->name('admin.grant.add');
+            Route::post('/grant-store',[GrantController::class,'store'])->name('admin.grant.store');
+            Route::post('/grant-status/{id}',[GrantController::class,'status'])->name('admin.grant.status');
+            Route::delete('/grant-delete/{id}',[GrantController::class,'destroy'])->name('admin.grant.delet');
+            Route::get('/grant-edit/{id}',[GrantController::class,'edit'])->name('admin.grant.edite');
+            Route::put('/grant-Update/{id}',[GrantController::class,'update'])->name('admin.grant.update');
 
         });
 

@@ -58,66 +58,25 @@
 <h2 data-dc-tpl="41" class="resorceHeroTitle">
 
     <span class="text-danger">&#x201C;</span>
-    Grant guides at a glance
+    {{ __('content.Grant guides at a glance') }}
     <span class="text-danger">&#x201E;</span>
     
 </h2>
-<p data-dc-tpl="42" class="resorceGrantDesc">One short guide per grant: what it is, who it's for, and where to find the official information.</p>
+<p data-dc-tpl="42" class="resorceGrantDesc">{{ __('content.One short guide per grant: what it is, who it\'s for, and where to find the official information.') }}</p>
 <div data-dc-tpl="43" class="resorceGrantDiv">
-<a data-dc-tpl="45" href="#" class="resorceGrantDivItem">
+@foreach ($grantgui as $grantg)
+@if ($grantg->status==1)
+<div data-dc-tpl="45" class="resorceGrantDivItem">
 <span data-dc-tpl="46" class="resorceGrantDivItemTitle">
 
 </span>
 <span data-dc-tpl="47" class="resorceGrantDivItemDEsc">
-    <span class="sc-interp">MIT Haalbaarheid</span>
+<span class="sc-interp">{{ $grantg->title }}</span>
 </span>
-<span data-dc-tpl="48" class="resorceGrantDivItemDate">Last checked: [date]</span>
-</a>
-<a data-dc-tpl="45" href="#" class="resorceGrantDivItem">
-<span data-dc-tpl="46" class="resorceGrantDivItemTitle">
-
-</span>
-<span data-dc-tpl="47" class="resorceGrantDivItemDEsc">
-<span class="sc-interp">MIT R&amp;D</span>
-</span>
-<span data-dc-tpl="48" class="resorceGrantDivItemDate">Last checked: [date]</span>
-</a>
-<a data-dc-tpl="45" href="#" class="resorceGrantDivItem">
-<span data-dc-tpl="46" class="resorceGrantDivItemTitle">
-
-</span>
-<span data-dc-tpl="47" class="resorceGrantDivItemDEsc">
-<span class="sc-interp">WBSO</span>
-</span>
-<span data-dc-tpl="48" class="resorceGrantDivItemDate">Last checked: [date]</span>
-</a>
-<a data-dc-tpl="45" href="#" class="resorceGrantDivItem">
-<span data-dc-tpl="46" class="resorceGrantDivItemTitle">
-
-</span>
-<span data-dc-tpl="47" class="resorceGrantDivItemDEsc">
-<span class="sc-interp">SVOM</span>
-</span>
-<span data-dc-tpl="48" class="resorceGrantDivItemDate">Last checked: [date]</span>
-</a>
-<a data-dc-tpl="45" href="#" class="resorceGrantDivItem">
-<span data-dc-tpl="46" class="resorceGrantDivItemTitle">
-
-</span>
-<span data-dc-tpl="47" class="resorceGrantDivItemDEsc">
-<span class="sc-interp">EIC</span>
-</span>
-<span data-dc-tpl="48" class="resorceGrantDivItemDate">Last checked: [date]</span>
-</a>
-<a data-dc-tpl="45" href="#" class="resorceGrantDivItem">
-<span data-dc-tpl="46" class="resorceGrantDivItemTitle">
-
-</span>
-<span data-dc-tpl="47" class="resorceGrantDivItemDEsc">
-
-</span>
-<span data-dc-tpl="48" class="resorceGrantDivItemDate">Last checked: [date]</span>
-</a>
+<span data-dc-tpl="48" class="resorceGrantDivItemDate">{{ $grantg->desc }}</span>
+</div>
+@endif
+@endforeach
 </div>
 </div>
 </section>

@@ -31,7 +31,7 @@
                                     <a class="nav-link TimesRoman @yield('pos')" aria-current="page" href="{{ route('admin.resorses.resorse') }}">Resorces</a>
                                 </li>
                                 <li class="nav-item ">
-                                    <a class="nav-link TimesRoman @yield('frequ')" href="{{ route('admin.FAQ.index') }}">FAQ</a>
+                                    <a class="nav-link TimesRoman @yield('frequ')" href="{{ route('admin.FAQ.index') }}">DATA</a>
                                 </li>
                                 <li class="nav-item ">
                                     <a class="nav-link TimesRoman @yield('custo')" href="{{ route('admin.customer.index') }}">customers</a>

@@ -27,19 +27,19 @@
     <section data-dc-tpl="12" class="enrixPart">
 <div data-dc-tpl="13" class="enrixPartDive">
 <p data-dc-tpl="14" class="secName">{{ __('content.Why partner with Enrix') }}</p>
-<h2 data-dc-tpl="15" class="enrixPartTitle">What your programme gains</h2>
+<h2 data-dc-tpl="15" class="enrixPartTitle">{{ $checkListBlock->lable }}</h2>
 <div data-dc-tpl="16" class="enrixPartSec">
 <div data-dc-tpl="17" class="enrixPartItem">
-<h3 data-dc-tpl="18" class="enrixPartItemTitle"><span class="text-danger">✓</span>Funding expertise for your cohort</h3>
-<p data-dc-tpl="19" class="enrixPartItemDesc">[One sentence]</p>
+<h3 data-dc-tpl="18" class="enrixPartItemTitle"><span class="text-danger">✓</span>{{ $checkListBlock->items[0] ?? '' }}</h3>
+<p data-dc-tpl="19" class="enrixPartItemDesc">{{ $checkListBlock->items[1] ?? '' }}</p>
 </div>
 <div data-dc-tpl="20" class="enrixPartItem">
-<h3 data-dc-tpl="21" class="enrixPartItemTitle"><span class="text-danger">✓</span>Better-prepared startups</h3>
-<p data-dc-tpl="22" class="enrixPartItemDesc">[One sentence]</p>
+<h3 data-dc-tpl="21" class="enrixPartItemTitle"><span class="text-danger">✓</span>{{ $checkListBlock->items[2] ?? '' }}</h3>
+<p data-dc-tpl="22" class="enrixPartItemDesc">{{ $checkListBlock->items[3] ?? '' }}</p>
 </div>
 <div data-dc-tpl="23" class="enrixPartItem">
-<h3 data-dc-tpl="24" class="enrixPartItemTitle"><span class="text-danger">✓</span>A long-term, personal partner</h3>
-<p data-dc-tpl="25" class="enrixPartItemDesc">[One sentence]</p>
+<h3 data-dc-tpl="24" class="enrixPartItemTitle"><span class="text-danger">✓</span>{{ $checkListBlock->items[4] ?? '' }}</h3>
+<p data-dc-tpl="25" class="enrixPartItemDesc">{{ $checkListBlock->items[5] ?? '' }}</p>
 </div>
 </div>
 </div>
@@ -47,54 +47,54 @@
 
     <section data-dc-tpl="26" class="together">
 <p data-dc-tpl="27" class="secName">{{ __('content.Ways we can work together') }}</p>
-<h2 data-dc-tpl="28" class="togetherTitle">Partnership formats</h2>
-<p data-dc-tpl="29" class="togetherDesc">[Keep the 2–3 formats you choose to offer; remove the rest.]</p>
+<h2 data-dc-tpl="28" class="togetherTitle">{{ $checkList1Block->lable }}</h2>
+<p data-dc-tpl="29" class="togetherDesc">{{ $checkList1Block->items[0] ?? '' }}</p>
 <div data-dc-tpl="30" class="togetherDiv">
 <div data-dc-tpl="32" class="togetherDivItem">
 <h3 data-dc-tpl="33" class="togetherDivTitle">
-<span class="sc-interp">Grant workshops for cohorts</span>
+<span class="sc-interp">{{ $checkList1Block->items[1] ?? '' }}</span>
 </h3>
 <p data-dc-tpl="34" class="togetherDivDesc">
-<span class="sc-interp">A session on the Dutch and EU grant landscape, tailored to your startups.</span>
+<span class="sc-interp">{{ $checkList1Block->items[2] ?? '' }}</span>
 </p>
 </div>
 <div data-dc-tpl="32" class="togetherDivItem">
 <h3 data-dc-tpl="33" class="togetherDivTitle">
-<span class="sc-interp">Funding office hours</span>
+<span class="sc-interp">{{ $checkList1Block->items[3] ?? '' }}</span>
 </h3>
 <p data-dc-tpl="34" class="togetherDivDesc">
-<span class="sc-interp">Regular slots where your startups bring their funding questions.</span>
+<span class="sc-interp">{{ $checkList1Block->items[4] ?? '' }}</span>
 </p>
 </div>
 <div data-dc-tpl="32" class="togetherDivItem">
 <h3 data-dc-tpl="33" class="togetherDivTitle">
-<span class="sc-interp">Grant readiness scans</span>
+<span class="sc-interp">{{ $checkList1Block->items[5] ?? '' }}</span>
 </h3>
 <p data-dc-tpl="34" class="togetherDivDesc">
-<span class="sc-interp">A quick check of whether a startup is ready to apply, and what to fix first.</span>
+<span class="sc-interp">{{ $checkList1Block->items[6] ?? '' }}</span>
 </p>
 </div>
 <div data-dc-tpl="32" class="togetherDivItem">
 <h3 data-dc-tpl="33" class="togetherDivTitle">
-<span class="sc-interp">Referral partnership</span></h3>
+<span class="sc-interp">{{ $checkList1Block->items[7] ?? '' }}</span></h3>
 <p data-dc-tpl="34" class="togetherDivDesc">
-<span class="sc-interp">You refer startups who need grant support; I keep you informed.</span>
+<span class="sc-interp">{{ $checkList1Block->items[8] ?? '' }}</span>
 </p>
 </div>
 <div data-dc-tpl="32" class="togetherDivItem">
 <h3 data-dc-tpl="33" class="togetherDivTitle">
-<span class="sc-interp">Speaking &amp; panels</span>
+<span class="sc-interp">{{ $checkList1Block->items[9] ?? '' }}</span>
 </h3>
 <p data-dc-tpl="34" class="togetherDivDesc">
-<span class="sc-interp">Talks on startup funding at your events or demo days.</span>
+<span class="sc-interp">{{ $checkList1Block->items[10] ?? '' }}</span>
 </p>
 </div>
 <div data-dc-tpl="32" class="togetherDivItem">
 <h3 data-dc-tpl="33" class="togetherDivTitle">
-<span class="sc-interp">Joint webinars &amp; guides</span>
+<span class="sc-interp">{{ $checkList1Block->items[11] ?? '' }}</span>
 </h3>
 <p data-dc-tpl="34" class="togetherDivDesc">
-<span class="sc-interp">Co-created content on funding for your community.</span>
+<span class="sc-interp">{{ $checkList1Block->items[12] ?? '' }}</span>
 </p>
 </div>
 </div>
@@ -103,27 +103,27 @@
     <section data-dc-tpl="35" class="howCan">
 <div data-dc-tpl="36" class="partnerWork">
 <p data-dc-tpl="37" class="secName">{{ __('content.How a partnership works') }}</p>
-<h2 data-dc-tpl="38" class="partnerWorkTitle">Simple to start</h2>
+<h2 data-dc-tpl="38" class="partnerWorkTitle">{{ $stepBlock->lable }}</h2>
 <div data-dc-tpl="64" class="workDiv">
 <div data-dc-tpl="65" class="workSec">
 <p data-dc-tpl="66" class="workStep">{{ __('content.Step 1') }}</p>
-<h3 data-dc-tpl="67" class="workH3">Intro call</h3>
-<p data-dc-tpl="68" class="workDescribe">We get to know each other and your startup.</p>
+<h3 data-dc-tpl="67" class="workH3">{{ $stepBlock->items[0] ?? '' }}</h3>
+<p data-dc-tpl="68" class="workDescribe">{{ $stepBlock->items[1] ?? '' }}</p>
 </div>
 <div data-dc-tpl="69" class="workSec">
 <p data-dc-tpl="70" class="workStep">{{ __('content.Step 2') }}</p>
-<h3 data-dc-tpl="71" class="workH3">Grant fit check</h3>
-<p data-dc-tpl="72" class="workDescribe">National, regional and EU grants checked against your project.</p>
+<h3 data-dc-tpl="71" class="workH3">{{ $stepBlock->items[2] ?? '' }}</h3>
+<p data-dc-tpl="72" class="workDescribe">{{ $stepBlock->items[3] ?? '' }}</p>
 </div>
 <div data-dc-tpl="73" class="workSec">
 <p data-dc-tpl="74" class="workStep">{{ __('content.Step 3') }}</p>
-<h3 data-dc-tpl="75" class="workH3">Writing together</h3>
-<p data-dc-tpl="76" class="workDescribe">We build a strong application step by step.</p>
+<h3 data-dc-tpl="75" class="workH3">{{ $stepBlock->items[4] ?? '' }}</h3>
+<p data-dc-tpl="76" class="workDescribe">{{ $stepBlock->items[5] ?? '' }}</p>
 </div>
 <div data-dc-tpl="77" class="workSec">
 <p data-dc-tpl="78" class="workStep">{{ __('content.Step 4') }}</p>
-<h3 data-dc-tpl="79" class="workH3">Submit &amp; follow up</h3>
-<p data-dc-tpl="80" class="workDescribe">I stay involved after submission.</p>
+<h3 data-dc-tpl="79" class="workH3">{{ $stepBlock->items[6] ?? '' }}</h3>
+<p data-dc-tpl="80" class="workDescribe">{{ $stepBlock->items[7] ?? '' }}</p>
 </div>
 </div>
 </div>

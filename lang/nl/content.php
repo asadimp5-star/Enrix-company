@@ -68,6 +68,8 @@ return [
     'About the author'=>'Over de auteur',
     'In short'=>'Kortom',
     'Return to Article List'=>'Terug naar de artikellijst',
+    'Grant guides at a glance'=>'Overzicht van de Grant-handleidingen',
+    "One short guide per grant: what it is, who it's for, and where to find the official information."=>"Per subsidie ​​een korte handleiding: wat het is, voor wie het bedoeld is en waar de officiële informatie te vinden is.",
     // end article page
 
     // start contact page

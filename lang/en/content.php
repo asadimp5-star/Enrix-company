@@ -68,6 +68,8 @@ return [
     'About the author'=>'About the author',
     'In short'=>'In short',
     'Return to Article List'=>'Return to Article List',
+    'Grant guides at a glance'=>'Grant guides at a glance',
+    "One short guide per grant: what it is, who it's for, and where to find the official information."=>"One short guide per grant: what it is, who it's for, and where to find the official information.",
     // end article page
 
     // start contact page

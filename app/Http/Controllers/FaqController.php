@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\FaqRequest;
 use App\Models\Faq;
+use App\Models\Grant;
 use Illuminate\Http\Request;
 
 class FaqController extends Controller
@@ -14,7 +15,8 @@ class FaqController extends Controller
     public function index($local)
     {
         $quests = Faq::orderByDesc('id')->paginate(8);
-        return view('admin.faq.faq-list',compact('quests'));
+        $grants = Grant::orderByDesc('id')->paginate(8);
+        return view('admin.faq.faq-list',compact('quests','grants'));
     }
 
     /**
@@ -106,8 +108,11 @@ class FaqController extends Controller
         $quests = Faq::with('translations')->whereHas('translations',function($q) use ($search) {
             $q->where('question','LIKE', "%{$search}%");
         })->paginate(3);
+        $grants = Grant::with('translations')->whereHas('translations',function($q) use ($search) {
+            $q->where('title','LIKE', "%{$search}%");
+        })->paginate(5);
         
-        return view('admin.faq.faq-list' , compact('quests'));
+        return view('admin.faq.faq-list' , compact('quests','grants'));
 
     }
 }

@@ -1,18 +1,18 @@
 @extends('admin.layout.master-page')
 
-@section('title','FAQ')
+@section('title','DATA')
 
 @section('frequ','active')
 
 @section('curent-page')
 <x-manual.page-curent>
   <x-slot>
-    <li class="breadcrumb-item p-1 active" aria-current="page">List of FAQ</li>
+    <li class="breadcrumb-item p-1 active" aria-current="page">List of DATA</li>
   </x-slot>
 </x-manual.page-curent>
 @endsection
 
-@section('page-name','List of FAQ')
+@section('page-name','List of DATA')
 
 @section('content')
 
@@ -26,7 +26,9 @@
     </form>
     </section>
 
-    <section >
+    <section>
+
+      <section >
       <div class="container-fluid col-lg-2 col-md-12  float-end bg-success rounded-3 text-center "style="margin-right:1rem;">
             <div>
                 <div class="p-3"><h6 class="shabnam" style="color: antiquewhite;">List of FAQ</h6></div>
@@ -42,8 +44,6 @@
       </div>
     </a>
     </section>
-    
-    
     
     <table class="table table-striped table-hover">
   <thead>
@@ -94,8 +94,84 @@
     <h6 class="d-flex justify-content-center fs-5 text-danger">There is no article</h6>
     @endforelse
   </tbody>
-</table>
-<div class="col-3 pe-5">{{ $quests->links() }}</div>
+    </table>
+    <div class="col-3 pe-5">{{ $quests->links() }}</div>
+    <hr>
+    </section>
+
+    <section class="mt-5">
+      <br>
+      <section class="mt-5">
+      <div class="container-fluid col-lg-2 col-md-12  float-end bg-success rounded-3 text-center "style="margin-right:1rem;">
+            <div>
+                <div class="p-3"><h6 class="shabnam" style="color: antiquewhite;">List of grants</h6></div>
+            </div>
+    
+    </div>
+    <a href="{{ route('admin.grant.add') }}">
+      <div class="container-fluid col-lg-2 col-md-12  float-start bg-primary rounded-3 text-center"style="margin-left:1rem;">
+            <div>
+                <div class="p-3"><h6 class=" shabnam" style="color: antiquewhite;">Add new data of grants</h6></div>
+            </div>
+    
+      </div>
+    </a>
+    </section>
+    
+    <table class="table table-striped table-hover">
+  <thead>
+    <tr class="shabnam fs-6">
+      <th scope="col">#</th>
+      <th scope="col">Data title</th>
+      <th scope="col">describe</th>
+      <th scope="col">Date</th>
+      <th scope="col">Status</th>
+      <th scope="col">Operation</th>
+    </tr>
+  </thead>
+  <tbody>
+    @forelse($grants as $grant)
+    <tr>
+      <td>{{ $loop->iteration }}</td>
+      <td>{{ substr($grant->translations->where('locale','en')->first()->title ?? 'none question',0,15)}}</td>
+      <td>{{ substr($grant->translations->where('locale','en')->first()->desc??'',0,30).'...' }}</td>
+      <td>{{ $grant->created_at }}</td>
+      <td> <span class="badge {{ $grant->status== 1 ? 'bg-success' : 'bg-danger' }}">
+            {{ $grant->status== 1 ? 'Activ' : 'Inactiv'}}
+      </span>
+      </td>
+      <td>
+        <section class="d-flex">
+
+                                <form class="mt-1" action="{{ route('admin.grant.status',$grant->id) }}" method="post">
+                                @csrf
+                                <button type="submit" class="btn btn-outline-success ">Change of status</button>
+                                </form>
+
+
+                                <form action="{{ route('admin.grant.delet',$grant->id) }}" method="post">
+                                 @csrf
+                                 @method('DELETE') 
+                                <button type="submit" onclick="return confirm('Are you sure?')" class="btn btn-outline-danger m-1">Delete</button>
+                                </form>
+                                
+                                <a href="{{ route('admin.grant.edite',$grant->id) }}" class="btn btn-outline-primary m-1">View and edit</a>
+                                
+                              </section>
+                              
+      </td>
+    </tr>
+    @empty
+    <h6 class="d-flex justify-content-center fs-5 text-danger">There is no article</h6>
+    @endforelse
+  <tbody>
+       
+  </tbody>
+    </table>
+    <div class="col-3 pe-5">{{ $grants->links() }}</div>
+    </section>
+
+    
 </section>
 
 
