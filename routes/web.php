@@ -4,15 +4,17 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\Admin\IndexController;
 use App\Http\Controllers\Admin\MessageController;
 use App\Http\Controllers\Admin\ResorceController;
+use App\Http\Controllers\Auth\AuthenticController;
+use App\Http\Controllers\Auth\ForgetEmailController;
 use App\Http\Controllers\Client\HomeController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\FirstPageController;
-use App\Http\Controllers\Grant_guideController;
 use App\Http\Controllers\GrantController;
 use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\StorieController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -21,7 +23,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::prefix('{local}')->where(['local'=>'en|nl'])->group(function(){
 
-Route::prefix('admin')->group(function(){
+Route::prefix('admin')->middleware(['Admin'])->group(function(){
     Route::get('/',[IndexController::class,'index'])->name('/admin');
     Route::post('/show-message/{id}',[MessageController::class,'show'])->name('admin.comment.show');
     Route::post('/message',[MessageController::class,'create'])->name('admin.message.create');
@@ -53,10 +55,10 @@ Route::prefix('admin')->group(function(){
         // Route::post('loging-out',[AuthenticController::class,'logOute'])->name('logOute');
         // Route::get('/user-aouth',[UserController::class,'aouth'])->name('admin.users.user-aouth');
         // Route::get('member-profile',[UserController::class,'memberProfile'])->name('admin.users.member-profile');
-        // Route::get('/User-pass-edit/{user}',[UserController::class,'showUserPass'])->name('admin.users.user-pass');
-        // Route::put('/User-pass-update/{user}',[UserController::class,'userPass'])->name('admin.users.user-passs');
-        // Route::get('/User-email-edit/{user}',[UserController::class,'useremail'])->name('admin.users.user-email');
-        // Route::put('/User-email-update/{user}',[UserController::class,'UserEmailCheng'])->name('admin.users.user-emaile');
+        Route::get('/User-pass-edit/{user}',[UserController::class,'showUserPass'])->name('admin.users.user-pass');
+        Route::put('/User-pass-update/{user}',[UserController::class,'userPass'])->name('admin.users.user-passs');
+        Route::get('/User-email-edit/{user}',[UserController::class,'useremail'])->name('admin.users.user-email');
+        Route::put('/User-email-update/{user}',[UserController::class,'UserEmailCheng'])->name('admin.users.user-emaile');
         // Route::get('/member-pass-edit/{user}',[UserController::class,'memberPass'])->name('admin.users.member-pass');
         // Route::put('/member-email-update/{user}',[UserController::class,'memberEmailCheng'])->name('admin.users.member-emaile');
         // Route::get('/member-email-edit/{user}',[UserController::class,'memberEmail'])->name('admin.users.member-email');
@@ -143,7 +145,9 @@ Route::prefix('admin')->group(function(){
         Route::put('/updatee/{serve}',[ServiceController::class,'update'])->name('admin.content.services.update');
         });
         Route::prefix('/settings')->group(function(){
-        Route::get('/profile',[IndexController::class,'showProfile'])->name('admin.settings.showProfile');
+        Route::get('/profile',[UserController::class,'index'])->name('admin.settings.showProfile');
+        Route::post('/loging-out',[AuthenticController::class,'logOute'])->name('admin.settings.logOute');
+
         });
 
 });
@@ -156,6 +160,17 @@ Route::get('/about',[HomeController::class,'about'])->name('about');
 Route::get('/resorces',[HomeController::class,'resorces'])->name('resorces');
 Route::get('/contact',[HomeController::class,'contact'])->name('contact');
 Route::get('/article/{slug}',[HomeController::class,'article'])->name('article');
+Route::middleware('Guest')->group(function(){
+// Route::get('/registering',[AuthenticController::class,'register'])->name('registering');
+// Route::post('/registeration',[AuthenticController::class,'registering'])->name('registering');
+Route::get('/loging',[AuthenticController::class,'login'])->name('loging');
+Route::post('/getIn',[AuthenticController::class,'getIn'])->name('getIn');
+Route::get('/confirm-email',[ForgetEmailController::class,'emailConfirm'])->name('emailConfirm');
+Route::post('/send-email',[ForgetEmailController::class,'emailSend'])->name('emailSend');
+Route::get('/password-set/{token}',[ForgetEmailController::class,'passwordSet'])->name('passwordSet');
+Route::post('/password-reset/{token}',[ForgetEmailController::class,'passwordReset'])->name('passwordReset');
+});
+
 });
 
 Route::middleware([

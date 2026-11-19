@@ -43,10 +43,10 @@
                                     <a class="nav-link dropdown-toggle TimesRoman @yield('seting')" href="#" data-bs-toggle="dropdown" aria-expanded="false">setting</a>
                                 <ul class="dropdown-menu"> 
                                     <li>
-                                        <a class="dropdown-item TimesRoman" href="#">Edit profile</a>
+                                        <a class="dropdown-item TimesRoman" href="{{ route('admin.settings.showProfile') }}">Edit profile</a>
                                     </li> 
                                     <li>
-                                        <form action="#" method="post">
+                                        <form action="{{ route('admin.settings.logOute') }}" method="post">
                                             @csrf
                                             <button type="submit" class="dropdown-item TimesRoman">Exit</a>
                                         </form>
@@ -77,7 +77,7 @@
                     <div class="d-flex justify-content-between end-100">
                         
                         
-                        <h4 class="TimesRoman">Hello...</h4>
+                        <h4 class="TimesRoman">Hello {{ Auth::User()->name }}</h4>
                         @yield('curent-page')
 
                     </div>

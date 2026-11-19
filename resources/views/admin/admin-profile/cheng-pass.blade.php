@@ -7,7 +7,7 @@
 @section('curent-page')
 <x-manual.page-curent>
   <x-slot>
-    <li class="breadcrumb-item p-1" aria-current="page"><a class="text-decoration-none" href="{{ route('admin.settings.show') }}">Edit profile</a></li>
+    <li class="breadcrumb-item p-1" aria-current="page"><a class="text-decoration-none" href="{{ route('admin.settings.showProfile') }}">Edit profile</a></li>
     <li class="breadcrumb-item p-1 active" aria-current="page">Change password</li>
   </x-slot>
 </x-manual.page-curent>
@@ -18,7 +18,7 @@
 @section('content')
 
 <section class="d-flex col-lg-8 col-md-9 col-sm-11 m-5">
-  <form action="#" class="col-9 shabnam" method="post">
+  <form action="{{ route('admin.users.user-passs',$user->id) }}" class="col-9 shabnam" method="post">
     @csrf
     @method('PUT')
     <div >
@@ -36,13 +36,13 @@
     @error('password_confirmation')
        <div class="alert alert-danger mt-1">{{ $message }}</div>
     @enderror
-    <div class="col-12">
+    <div class="col-12 mt-5">
     <button class="btn btn-primary" type="submit">Registration</button>
     </div>
     <div class="col-12">
     </div>
   </form>
-    <a class="btn btn-warning mt-3" href="#">Return</a>
+    <a class="btn btn-warning mt-3" href="{{ route('admin.settings.showProfile') }}">Return</a>
 
 </section>
 

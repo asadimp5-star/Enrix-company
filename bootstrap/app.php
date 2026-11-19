@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Middleware\Admin;
+use App\Http\Middleware\Guest;
 use App\Http\Middleware\Languege;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
@@ -15,6 +17,8 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware): void {
         $middleware->alias([
         'Languege'  => App\Http\Middleware\Languege::class,
+        'Admin'  => App\Http\Middleware\Admin::class,
+        'Guest'  => App\Http\Middleware\Guest::class,
         ]);
         $middleware->append(App\Http\Middleware\Languege::class);
     })

@@ -20,25 +20,14 @@
   <section class="justify-content-between shabnam m-5">
     <section class="d-flex ">
       <div class="col-md-4 m-5">
-    <label  class="form-label">First Name</label>
-    <h4></h4>
+    <label  class="form-label">Full Name</label>
+    <h4>{{ Auth::user()->name }}</h4>
   </div>
   <div class="col-md-4 m-5">
-    <label  class="form-label">Last Name</label>
-    <h4></h4>
+    <label class="form-label">email address</label>
+    <h4>{{ Auth::user()->email }}</h4>
   </div>
     </section> 
-    <section class="d-flex">
-      <div class="col-md-4 m-5">
-    <label class="form-label">email address</label>
-    <h4></h4>
-    
-  </div>
-
-    </section>
-  
-  
-  
   
  
 
@@ -48,11 +37,11 @@
   <section class="d-flex justify-content-between col-lg-5 col-md-7 col-sm-9 m-5">
 
   <div>
-  <a href="#" class="btn btn-info sahel">Change password</a>
+  <a href="{{ route('admin.users.user-pass', Auth::user()->id) }}" class="btn btn-info sahel">Change password</a>
 
   </div>
   <div>
-  <a href="#" class="btn btn-info sahel">Change email address</a>
+  <a href="{{ route('admin.users.user-email', Auth::user()->id) }}" class="btn btn-info sahel">Change email address</a>
   
 
   </div>
