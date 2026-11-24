@@ -12,6 +12,7 @@ return [
     // end menue
 
     // start first page
+    'Entix Company HOME'=>'Entix Company | HOME',
     'Book an intro call' => 'Book an intro call',
     'See services' => 'See services',
     'Results strip' => 'Results strip',
@@ -25,6 +26,7 @@ return [
     // end first page
 
     // start service page
+    'Enrix Company services'=>'Enrix Company | services',
     'Service intro' => 'Service intro',
     "Who it's for" => "Who it's for",
     "What's included" => "What's included",
@@ -32,6 +34,7 @@ return [
     // end service page
 
     // start partner page
+    'Enrix Company for partners'=>'Enrix Company for | partners',
     'Introduction' => 'Introduction',
     "Let's talk about a partnership" => "Let's talk about a partnership",
     'Why partner with Enrix' => 'Why partner with Enrix',
@@ -44,6 +47,7 @@ return [
     'return' => 'Return',
 
     // start about page
+    'Enrix Company about'=>'Enrix Company | about',
     'Book a free intro call' => 'Book a free intro call',
     'My story' => 'My story',
     'My approach' => 'My approach',
@@ -53,6 +57,7 @@ return [
     // end about page
 
     // start recourse page
+    'Enrix Company resorces'=>'Enrix Company | resorces',
     'Latest article' => 'Latest article',
     'Read article' => 'Read article',
     'Article list' => 'Article list',
@@ -61,7 +66,9 @@ return [
     // end recourse page
 
     // start article page
+    'Enrix Company article'=>'Enrix Company | article',
     'Article header' => 'Article header',
+    'summary'=>'summary',
     'Key takeaways' => 'Key takeaways',
     'Article text' => 'Article text',
     'Sources & further reading' => 'Sources & further reading',
@@ -73,6 +80,7 @@ return [
     // end article page
 
     // start contact page
+    'Enrix Company contact'=>'Enrix Company | contact',
     "Let's get in touch"=>"Let's get in touch",
     "Whether you're a startup looking for funding or an accelerator exploring a partnership, I'd love to hear from you."=>"Whether you're a startup looking for funding or an accelerator exploring a partnership, I'd love to hear from you.",
     'Contact form' => 'Contact form',

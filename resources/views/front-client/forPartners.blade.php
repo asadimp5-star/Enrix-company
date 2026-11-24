@@ -1,8 +1,8 @@
 @extends('front-client.layout.masterPage')
 
-@section('title',app()->getLocale() == 'en' ? 'Enrix Company for partners' : 'Enrix Bedrijf Voor partners')
+@section('title',__('content.Enrix Company for partners'))
 
-@section('partn','activ')
+@section('partn-page','activ')
 
 
 @section('content')

@@ -12,6 +12,7 @@ return [
     // end menue
 
     // start first page
+    'Entix Company HOME'=>'Enrix Bedrijf | thuis',
     'Book an intro call' => 'Plan een kennismakingsgesprek.',
     'See services' => 'Bekijk diensten',
     'Results strip' => 'Resultatenstrook',
@@ -25,6 +26,7 @@ return [
     // end first page
 
     // start service page
+    'Enrix Company services'=>'Enrix Bedrijf | Diensten',
     'Service intro' => 'Service-introductie',
     "Who it's for" => "Voor wie is het bedoeld?",
     "What's included" => "Wat is inbegrepen?",
@@ -32,6 +34,7 @@ return [
     // end service page
 
     // start partner page
+    'Enrix Company for partners'=>'Enrix Bedrijf | Voor partners',
     'Introduction' => 'Invoering',
     "Let's talk about a partnership" => "Laten we het hebben over een partnerschap.",
     'Why partner with Enrix' => 'Waarom samenwerken met Enrix?',
@@ -44,6 +47,7 @@ return [
     'return' => 'opbrengst',
 
     // start about page
+    'Enrix Company about'=>'Enrix Bedrijf | Over',
     'Book a free intro call' => 'Boek een gratis kennismakingsgesprek.',
     'My story' => 'Mijn verhaal',
     'My approach' => 'Mijn aanpak',
@@ -53,6 +57,7 @@ return [
     // end about page
 
     // start recourse page
+    'Enrix Company resorces'=>'Enrix Bedrijf | Bronnen',
     'Latest article' => 'Laatste artikel',
     'Read article' => 'Lees het artikel',
     'Article list' => 'Artikelenlijst',
@@ -61,7 +66,9 @@ return [
     // end recourse page
 
     // start article page
+    'Enrix Company article'=>'Enrix Bedrijf | artikel',
     'Article header' => 'Artikelkop',
+    'summary'=>'samenvatting',
     'Key takeaways' => 'Belangrijkste conclusies',
     'Article text' => 'Artikeltekst',
     'Sources & further reading' => 'Bronnen en verdere literatuur',
@@ -73,6 +80,7 @@ return [
     // end article page
 
     // start contact page
+    'Enrix Company contact'=>'Enrix Bedrijf | contact',
     "Let's get in touch"=>"Laten we contact opnemen",
     "Whether you're a startup looking for funding or an accelerator exploring a partnership, I'd love to hear from you."=>"Of je nu een startup bent die op zoek is naar financiering of een accelerator die een samenwerking onderzoekt, ik hoor graag van je.",
     'Contact form' => 'Contactformulier',

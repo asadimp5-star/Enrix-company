@@ -27,7 +27,15 @@ class HomeController extends Controller
         $checkListBlock = $blocks->firstWhere('type' , 'checkList');
         $checkList1Block = $blocks->firstWhere('type' , 'checkList1');
         $stepBlock = $blocks->firstWhere('type' , 'step');
-        return view('front-client.home',compact('home','checkListBlock','checkList1Block','stepBlock'));
+        $hero = $home->first();
+        $seo = $this->makeSeo(
+            $hero->title ?? 'HOME',
+            $hero->desc ?? '',
+            route('home',['local' => $local]),
+            $hero->title ?? '',
+            $hero?->image1 ? asset('storage/firstImg/'.$hero->image1) : null
+        );
+        return view('front-client.home',compact('home','checkListBlock','checkList1Block','stepBlock','seo'));
 
     }
 
@@ -40,7 +48,16 @@ class HomeController extends Controller
         $checkList1Block = $blocks->firstWhere('type' , 'checkList1');
         $stepBlock = $blocks->firstWhere('type' , 'step');
         $pillBlock = $blocks->firstWhere('type' , 'pill');
-        return view('front-client.services',compact('service','faqs','checkListBlock','checkList1Block','stepBlock','pillBlock'));
+
+        $hero = $service->first();
+        $seo = $this->makeSeo(
+            $hero->title ?? 'service',
+            $hero->desc ?? '',
+            route('services',['local' => $local]),
+            $hero->title ?? '',
+            $hero?->image1 ? asset('storage/firstImg/'.$hero->image1) : null
+        );
+        return view('front-client.services',compact('service','faqs','checkListBlock','checkList1Block','stepBlock','pillBlock','seo'));
     }
 
     public function partners($local)
@@ -51,7 +68,16 @@ class HomeController extends Controller
         $checkListBlock = $blocks->firstWhere('type' , 'checkList');
         $checkList1Block = $blocks->firstWhere('type' , 'checkList1');
         $stepBlock = $blocks->firstWhere('type' , 'step');
-        return view('front-client.forPartners',compact('partns','customrs','checkListBlock','checkList1Block','stepBlock'));
+
+        $hero = $partns->first();
+        $seo = $this->makeSeo(
+            $hero->title ?? 'partns',
+            $hero->desc ?? '',
+            route('partners',['local' => $local]),
+            $hero->title ?? '',
+            $hero?->image1 ? asset('storage/partnerImg/'.$hero->image1) : null
+        );
+        return view('front-client.forPartners',compact('partns','customrs','checkListBlock','checkList1Block','stepBlock','seo'));
     }
 
     public function about($local)
@@ -62,7 +88,16 @@ class HomeController extends Controller
         $checkListBlock = $blocks->firstWhere('type' , 'checkList');
         $checkList1Block = $blocks->firstWhere('type' , 'checkList1');
         $stepBlock = $blocks->firstWhere('type' , 'step');
-        return view('front-client.about',compact('abouts','story','checkListBlock','checkList1Block','stepBlock'));
+
+        $hero = $abouts->first();
+        $seo = $this->makeSeo(
+            $hero->title ?? 'abouts',
+            $hero->desc ?? '',
+            route('about',['local' => $local]),
+            $hero->title ?? '',
+            $hero?->image1 ? asset('storage/aboutImg/'.$hero->image1) : null
+        );
+        return view('front-client.about',compact('abouts','story','checkListBlock','checkList1Block','stepBlock','seo'));
     }
 
     public function resorces($local)
@@ -70,7 +105,16 @@ class HomeController extends Controller
         $posts = Post::orderByDesc('id')->paginate(8);
         $lastPost = Post::latest('id')->get();
         $grantgui = Grant::all();
-        return view('front-client.resorces',compact('posts','lastPost','grantgui'));
+
+        $hero = $posts->first();
+        $seo = $this->makeSeo(
+            $hero->title ?? 'posts',
+            $hero->desc ?? '',
+            route('resorces',['local' => $local]),
+            $hero->title ?? '',
+            $hero?->image1 ? asset('storage/postsImg/'.$hero->image1) : null
+        );
+        return view('front-client.resorces',compact('posts','lastPost','grantgui','seo'));
     }
 
     public function contact($local)
@@ -81,6 +125,15 @@ class HomeController extends Controller
     public function article($local,$slug)
     {
         $articls = Post::where('slug',$slug)->firstOrFail();
-        return view('front-client.article',compact('articls'));
+
+        $hero = $articls->first();
+        $seo = $this->makeSeo(
+            $hero->title ?? 'articls',
+            $hero->summery ?? '',
+            route('article',['local' => $local , 'slug' =>$articls->slug]),
+            is_array($hero->keywords_list) ? implode(',', $hero->keywords_list ) : '',
+            $hero?->image1 ? asset('storage/postsImg/'.$hero->image1) : null
+        );
+        return view('front-client.article',compact('articls','seo'));
     }
 }

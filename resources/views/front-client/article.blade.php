@@ -1,6 +1,6 @@
 @extends('front-client.layout.masterPage')
 
-@section('title',app()->getLocale() == 'en' ? 'Enrix Company article' : 'Enrix Bedrijf artikel')
+@section('title-page',__('content.Enrix Company article'))
 
 @section('Reso','active')
 
@@ -21,6 +21,9 @@
 <div data-dc-tpl="18" >
     <img class="SarticleTitleImag" src="{{ asset('storage/postsImg/'. $articls->image1) }}" alt="{{ $articls->title }}">
 </div>
+<p data-dc-tpl="19" class="secName">{{ __('content.summary') }}</p>
+<p data-dc-tpl="30" class="SarticleDesc fw-lighter">{!! nl2br(e($articls->summery)) !!}</p>
+<br>
 <p data-dc-tpl="19" class="secName">{{ __('content.Key takeaways') }}</p>
 <div data-dc-tpl="20" class="SarticleKeyw">
 <h2 data-dc-tpl="21" class="SarticleKeywTitle">{{ __('content.In short') }}</h2>

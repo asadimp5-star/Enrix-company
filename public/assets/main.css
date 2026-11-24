@@ -644,7 +644,7 @@ footer a{
   display: flex; flex-direction: column; gap: 8px;
 }
 .SarticleDesc{
-  margin: 36px 0px 12px; font-size: 28px;
+  margin: 36px 0px 12px; font-size: 20px;
 }
 .SarticleDescImg{
   height: 260px;width: 100%; background: rgb(226, 230, 234); border-radius: 12px; display: flex;

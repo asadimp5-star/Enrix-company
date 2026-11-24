@@ -4,8 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @include('front-client.layout.links')
+    @php
+    $seoTitle = $seo['title'] ?? 'Enrix Company';
+    $seoDesc = $seo['description'] ?? '';
+    $seoKeywords = $seo['keywords'] ?? '';
+    $seoCanonical = $seo['canonical'] ?? url()->current();
+    $seoImg = $seo['image'] ?? asset('assets/company-image/content/istockphoto-153974885-1024x1024.png');
+    @endphp
 
-    <title>@yield('title')</title>
+    <title>@yield('title-page','Entix International Company')</title>
+    <meta name="title" content="{{ $seoTitle }}">
+    <meta name="description" content="{{ $seoDesc }}">
+    <meta name="keywords" content="{{ $seoKeywords }}">
+    <meta name="image" content="{{ $seoImg }}">
+    <link rel="canonical" href="{{ $seoCanonical }}">
+    @yield('seo_schema');
 </head>
 @livewireStyles
 
