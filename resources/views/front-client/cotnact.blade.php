@@ -98,11 +98,11 @@
 <div data-dc-tpl="50" class="contactDivSide1Title">
 <div data-dc-tpl="51">
 <p data-dc-tpl="52" class="contactDivSide1Name">Email</p>
-<a data-dc-tpl="53" href="#">[your email address]</a>
+<a data-dc-tpl="53" href="mailto:Mahsa@enrix.nl">Mahsa@enrix.nl</a>
 </div>
 <div data-dc-tpl="54">
 <p data-dc-tpl="55" class="contactDivSide1Name">LinkedIn</p>
-<a data-dc-tpl="56" href="#">[your LinkedIn profile]</a>
+<a data-dc-tpl="56" href="https://www.linkedin.com/in/mahsa-asadi/">mahsa-asadi</a>
 </div>
 <div data-dc-tpl="57">
 </div>
@@ -135,7 +135,7 @@
 <h2 data-dc-tpl="74" class="contactBookDivDesc">{{ __('content.Prefer to pick a time yourself?') }}</h2>
 <p data-dc-tpl="75" class="contactBookDivDesc1">{{ __('content.Choose a moment that suits you for a free 30-minute intro call') }}</p>
 </div>
-<button data-dc-tpl="76" type="button" class="contactFormBut">{{ __('content.Book a time') }}</button>
+<a data-dc-tpl="76" href="https://calendar.app.google/vBCobr5AtncxPGkg9" class="contactFormBut">{{ __('content.Book a time') }}</a>
 </div>
 </section>
 

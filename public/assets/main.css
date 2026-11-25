@@ -34,6 +34,9 @@ nav{
 .navItem.activ{
   color: #e7aa3f!important; text-decoration: none;border-bottom: 1px solid #FF2A00;font-weight: bold;
 }
+.lang-activ{
+  color: #e7aa3f!important; text-decoration: none;border-bottom: 1px solid #FF2A00;font-weight: bold;
+}
 .headerdiv2{
   display: flex; align-items: center; gap: 16px;
 }
@@ -641,7 +644,7 @@ footer a{
   margin: 0px 0px 12px; font-size: 20px;
 }
 .SarticleKeywDesc{
-  display: flex; flex-direction: column; gap: 8px;
+  display: flex; flex-direction: row; gap: 8px;
 }
 .SarticleDesc{
   margin: 36px 0px 12px; font-size: 20px;

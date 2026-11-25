@@ -12,7 +12,7 @@
             
             <section class="col-4">
                     <a href="{{ route('/admin') }}" class="text-decoration-none d-flex align-items-center">
-                        <img  src="#" class="img-thumbnail " alt="image logo" width="90" height="60">     
+                        <img  src="{{ asset('assets/company-image/slider/Untitled design (2).png') }}" class="img-thumbnail " alt="image logo" width="50" height="50">     
                         <h3 class="mt-1 ">Enrix</h3>
                     </a>
 

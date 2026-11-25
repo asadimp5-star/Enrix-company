@@ -16,7 +16,7 @@
 <p data-dc-tpl="71" class="getInTouchP1">{{ __('content.Book a free 30-minute call or send me a message.') }}</p>
 </div>
 <div data-dc-tpl="72" class="getTouchdiv2">
-<a data-dc-tpl="73" href="#" class="getInTouchA">{{ __('content.Book a time') }}</a>
+<a data-dc-tpl="73" href="https://calendar.app.google/vBCobr5AtncxPGkg9" class="getInTouchA">{{ __('content.Book a time') }}</a>
 <a data-dc-tpl="74" href="{{ route('contact') }}#formC" class="getInTouchA1">{{ __('content.Send a message') }}</a>
 </div>
 </div>

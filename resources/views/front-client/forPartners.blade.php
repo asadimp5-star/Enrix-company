@@ -2,7 +2,7 @@
 
 @section('title',__('content.Enrix Company for partners'))
 
-@section('partn-page','activ')
+@section('partn','activ')
 
 
 @section('content')

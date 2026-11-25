@@ -104,7 +104,7 @@
       <section class="mt-5">
       <div class="container-fluid col-lg-2 col-md-12  float-end bg-success rounded-3 text-center "style="margin-right:1rem;">
             <div>
-                <div class="p-3"><h6 class="shabnam" style="color: antiquewhite;">List of grants</h6></div>
+                <div class="p-3"><h6 class="shabnam" style="color: antiquewhite;">List of grants(Resorces)</h6></div>
             </div>
     
     </div>

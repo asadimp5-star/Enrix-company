@@ -2,7 +2,7 @@
 <div data-dc-tpl="5" class="headerdiv">
 <div data-dc-tpl="6" class="headerdiv1">
 <a href="{{ route('home') }}" class="headerdiv1">
-<img src="#" alt="enrix logo">
+<img src="{{ asset('assets/company-image/slider/Untitled design (2).png') }}" alt="enrix logo" class="img-thumbnail " width="60" height="60">
 ENRIX 
 </a>
 </div>
@@ -22,11 +22,15 @@ ENRIX
       array_shift($segment);
       }
         $path = implode('/',$segment);
+        
+        $curentLang = request()->segment(1) ?? 'en';
      
     @endphp
-<a data-dc-tpl="16" href="{{ url('/en/' . $path) }}" style="color: #C9A66B;">EN</a>
-<span style="color: #C9A66B;">|</span>     
-<a data-dc-tpl="16" href="{{ url('/nl/' . $path) }}" style="color: #C9A66B;">NL</a>
+<a data-dc-tpl="16" href="{{ url('/en/' . $path) }}" style="color: #C9A66B;"
+class="{{ $curentLang == 'en' ? 'lang-activ' : '' }}" >EN</a>
+<span class="text-light">|</span>     
+<a data-dc-tpl="16" href="{{ url('/nl/' . $path) }}" style="color: #C9A66B;"
+class="{{ $curentLang == 'nl' ? 'lang-activ' : '' }}">NL</a>
 </span>
 <a data-dc-tpl="17" href="{{ route('services') }}#FAQs" class="getInTouch">FAQ</a>
 </div>

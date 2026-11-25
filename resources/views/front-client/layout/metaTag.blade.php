@@ -6,8 +6,8 @@
     @include('front-client.layout.links')
     @php
     $seoTitle = $seo['title'] ?? 'Enrix Company';
-    $seoDesc = $seo['description'] ?? '';
-    $seoKeywords = $seo['keywords'] ?? '';
+    $seoDesc = $seo['description'] ?? 'Enrix helps early-stage startups in the Netherlands win Dutch and EU grants, design a clear grant roadmap and grow with go-to-market advice.';
+    $seoKeywords = $seo['keywords'] ?? 'Grant advisor,Netherlands, Startup grant writing, grant roadmap, early-stage startup funding, funding';
     $seoCanonical = $seo['canonical'] ?? url()->current();
     $seoImg = $seo['image'] ?? asset('assets/company-image/content/istockphoto-153974885-1024x1024.png');
     @endphp

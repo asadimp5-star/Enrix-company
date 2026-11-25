@@ -30,9 +30,9 @@ class HomeController extends Controller
         $hero = $home->first();
         $seo = $this->makeSeo(
             $hero->title ?? 'HOME',
-            $hero->desc ?? '',
+            $hero->desc ?? 'Enrix helps early-stage startups in the Netherlands win Dutch and EU grants, design a clear grant roadmap and grow with go-to-market advice.',
             route('home',['local' => $local]),
-            $hero->title ?? '',
+            $hero->title ?? 'Grant advisor Netherlands, Startup grant writing, grant roadmap, early-stage startup funding, funding',
             $hero?->image1 ? asset('storage/firstImg/'.$hero->image1) : null
         );
         return view('front-client.home',compact('home','checkListBlock','checkList1Block','stepBlock','seo'));
@@ -52,7 +52,7 @@ class HomeController extends Controller
         $hero = $service->first();
         $seo = $this->makeSeo(
             $hero->title ?? 'service',
-            $hero->desc ?? '',
+            $hero->desc ?? 'Enrix helps early-stage startups in the Netherlands win Dutch and EU grants, design a clear grant roadmap and grow with go-to-market advice.',
             route('services',['local' => $local]),
             $hero->title ?? '',
             $hero?->image1 ? asset('storage/firstImg/'.$hero->image1) : null
@@ -72,9 +72,9 @@ class HomeController extends Controller
         $hero = $partns->first();
         $seo = $this->makeSeo(
             $hero->title ?? 'partns',
-            $hero->desc ?? '',
+            $hero->desc ?? 'Enrix helps early-stage startups in the Netherlands win Dutch and EU grants, design a clear grant roadmap and grow with go-to-market advice.',
             route('partners',['local' => $local]),
-            $hero->title ?? '',
+            $hero->title ?? 'Grant advisor Netherlands, Startup grant writing, grant roadmap, early-stage startup funding, funding',
             $hero?->image1 ? asset('storage/partnerImg/'.$hero->image1) : null
         );
         return view('front-client.forPartners',compact('partns','customrs','checkListBlock','checkList1Block','stepBlock','seo'));
@@ -92,9 +92,9 @@ class HomeController extends Controller
         $hero = $abouts->first();
         $seo = $this->makeSeo(
             $hero->title ?? 'abouts',
-            $hero->desc ?? '',
+            $hero->desc ?? 'Enrix helps early-stage startups in the Netherlands win Dutch and EU grants, design a clear grant roadmap and grow with go-to-market advice.',
             route('about',['local' => $local]),
-            $hero->title ?? '',
+            $hero->title ?? 'Grant advisor Netherlands, Startup grant writing, grant roadmap, early-stage startup funding, funding',
             $hero?->image1 ? asset('storage/aboutImg/'.$hero->image1) : null
         );
         return view('front-client.about',compact('abouts','story','checkListBlock','checkList1Block','stepBlock','seo'));
@@ -109,9 +109,9 @@ class HomeController extends Controller
         $hero = $posts->first();
         $seo = $this->makeSeo(
             $hero->title ?? 'posts',
-            $hero->desc ?? '',
+            $hero->desc ?? 'Enrix helps early-stage startups in the Netherlands win Dutch and EU grants, design a clear grant roadmap and grow with go-to-market advice.',
             route('resorces',['local' => $local]),
-            $hero->title ?? '',
+            $hero->title ?? 'Grant advisor Netherlands, Startup grant writing, grant roadmap, early-stage startup funding, funding',
             $hero?->image1 ? asset('storage/postsImg/'.$hero->image1) : null
         );
         return view('front-client.resorces',compact('posts','lastPost','grantgui','seo'));
